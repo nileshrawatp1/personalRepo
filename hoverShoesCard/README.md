@@ -4,7 +4,7 @@
 
 ### Triple HAsh
 
-#### Add images under p tag and alight="center" to center the image
+#### Add images under p tag and alight="center" to center the image {4 hash}
 
 ##### Five Hash
 
