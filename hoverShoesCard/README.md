@@ -6,7 +6,7 @@
 
 adding images here
 
-<p align="right">
+<p align="left">
   <img src="./ready-pic.png">
 </p>
 
