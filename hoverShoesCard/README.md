@@ -5,6 +5,6 @@
 ### Triple HAsh
 
 adding images here
-<p align="right">
-<img src="./ready-pic.png">
-</p>
+
+<img align="right" src="./ready-pic.png">
+
