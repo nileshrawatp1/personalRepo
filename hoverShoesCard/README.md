@@ -4,8 +4,9 @@
 
 ### Triple HAsh
 
-adding images here
+#### Add images under p tag and alight="center" to center the image
 
+adding images here
 <p align="center">
   <img src="./ready-pic.png">
 </p>
