@@ -12,7 +12,7 @@
 
 ####### seven
 
-######## Eight
+Only Six hashes used to work.
 
 adding images here
 <p align="center">
