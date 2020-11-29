@@ -6,4 +6,4 @@
 
 adding images here
 
-<img src="./ready-pic.png" width="100">
+<img src="./ready-pic.png" width="50%">
