@@ -6,5 +6,5 @@
 
 adding images here
 
-<img align="right" src="./ready-pic.png">
+<img align="center" src="./ready-pic.png">
 
