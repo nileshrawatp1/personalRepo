@@ -1,4 +1,4 @@
-# sieveOfEratosthenes_Visualization
+# _Visualization
 Visualizer for (Prime Number Generator)
 <p text-align="center">
 <img src="./getPrimeNum.png">
