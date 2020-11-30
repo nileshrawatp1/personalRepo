@@ -28,10 +28,30 @@ var month = new Array(); <br>
   month[11] = "December"; <br>
 var birthMonth = month[DOB.getMonth()]; <br>
   
- 
+
+if(birthDate < 10){ <br>
+     birthDate = "0"+birthDate; <br>
+ } <br>
+ if(birthMonth < 10){ <br>
+     birthMonth = "0"+birthMonth; <br>
+ } <br>
+
+
  var hours = DOB.getHours(); <br>
  var minutes = DOB.getMinutes(); <br>
  var secs = DOB.getSeconds(); <br>
+  
+  
+ if(hours < 10){ <br>
+     hours = "0"+hours; <br>
+ } <br>
+ if(minutes < 10){ <br>
+     minutes = "0"+minutes; <br>
+ } <br>
+ if(secs < 10){ <br>
+     secs = "0"+secs; <br>
+ } <br>
+  
   
   print(birthDate); <br>
   print(birthMonth); <br>
@@ -48,6 +68,4 @@ var birthMonth = month[DOB.getMonth()]; <br>
 January
 1995
 Thursday
-4:
-15:
-0
+04:15:00
