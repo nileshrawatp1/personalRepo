@@ -1,0 +1,53 @@
+##### we can also get the desired date by passing the proper date in brackets.
+
+  var DOB = new Date("January 26, 1995 04:15:00");
+  var birthDate = DOB.getDate();
+  var birthYear = DOB.getFullYear();
+  var weekday = new Array(7);
+  weekday[0] = "Sunday";
+  weekday[1] = "Monday";
+  weekday[2] = "Tuesday";
+  weekday[3] = "Wednesday";
+  weekday[4] = "Thursday";
+  weekday[5] = "Friday";
+  weekday[6] = "Saturday";
+  var birthDay = weekday[DOB.getDay()];
+  
+  var month = new Array();
+  month[0] = "January";
+  month[1] = "February";
+  month[2] = "March";
+  month[3] = "April";
+  month[4] = "May";
+  month[5] = "June";
+  month[6] = "July";
+  month[7] = "August";
+  month[8] = "September";
+  month[9] = "October";
+  month[10] = "November";
+  month[11] = "December";
+  var birthMonth = month[DOB.getMonth()];
+  
+ 
+ var hours = DOB.getHours();
+ var minutes = DOB.getMinutes();
+ var secs = DOB.getSeconds();
+  
+  print(birthDate);
+  print(birthMonth);
+  print(birthYear);
+  print(birthDay);
+  print(hours);
+  print(minutes);
+  print(secs);
+
+
+  #### OUTPUT
+
+26
+January
+1995
+Thursday
+4
+15
+0
