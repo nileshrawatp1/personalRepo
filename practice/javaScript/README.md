@@ -63,3 +63,16 @@ January
 Thursday
 04:15:00
 </details>
+
+<details><summary> Remove Same Values Inside Array </summary>
+- `This will not work for Nodeflow`
+```
+const lArr = ["new", "hello", "group", "new", "one","hello"];
+const uniqueArr = Array.from(new Set(lArr));
+
+console.log(uniqueArr);
+```
+<ins> OUTPUT </ins>
+'
+["new", "hello", "group", "one"]
+'
