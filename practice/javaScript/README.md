@@ -73,7 +73,8 @@ const uniqueArr = Array.from(new Set(lArr));
 
 console.log(uniqueArr);
 ```
-<ins> OUTPUT </ins>
+<ins> OUTPUT </ins>       
+
 '
 ["new", "hello", "group", "one"]
 '
