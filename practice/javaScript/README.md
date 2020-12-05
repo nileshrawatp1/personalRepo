@@ -55,7 +55,8 @@ if(birthDate < 10){
   print(secs);             
 ```
 
-  #### >OUTPUT 26 January 1995 Thursday 04:15:00
+  >OUTPUT ==>> 26 January 1995 Thursday 04:15:00    
+
 </details>
 
 <details><summary> Remove Same Values Inside Array </summary>
@@ -69,7 +70,7 @@ console.log(uniqueArr);
 ```          
 
 
->Output  ["new", "hello", "group", "one"]       
+>Output ==>> ["new", "hello", "group", "one"]       
 
 
 
