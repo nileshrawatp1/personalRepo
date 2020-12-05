@@ -1,5 +1,5 @@
-##### <ins>we can also get the desired date by passing the proper date in brackets.</ins>
-<details><summary> Click Here To Get Code </summary>
+### <ins>Helpful Codes</ins>
+<details><summary> Convert Date in Proper Form </summary>
 
 ```js
 var DOB = new Date("January 26, 1995 04:15:00");             
@@ -62,3 +62,4 @@ January
 1995
 Thursday
 04:15:00
+</details>
