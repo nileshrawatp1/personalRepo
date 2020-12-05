@@ -1,66 +1,59 @@
-##### we can also get the desired date by passing the proper date in brackets.
+##### <ins>we can also get the desired date by passing the proper date in brackets.</ins>
+<details><summary> Click Here To Get Code </summary>
 
-var DOB = new Date("January 26, 1995 04:15:00"); <br>
-var birthDate = DOB.getDate(); <br>
-var birthYear = DOB.getFullYear(); <br>
-var weekday = new Array(7); <br>
-  weekday[0] = "Sunday"; <br>
-  weekday[1] = "Monday"; <br>
-  weekday[2] = "Tuesday"; <br>
-  weekday[3] = "Wednesday"; <br>
-  weekday[4] = "Thursday"; <br>
-  weekday[5] = "Friday"; <br>
-  weekday[6] = "Saturday"; <br>
-var birthDay = weekday[DOB.getDay()]; <br>
-  
-var month = new Array(); <br>
-  month[0] = "January"; <br>
-  month[1] = "February"; <br>
-  month[2] = "March"; <br>
-  month[3] = "April"; <br>
-  month[4] = "May"; <br>
-  month[5] = "June"; <br>
-  month[6] = "July"; <br>
-  month[7] = "August"; <br>
-  month[8] = "September"; <br>
-  month[9] = "October"; <br>
-  month[10] = "November"; <br>
-  month[11] = "December"; <br>
-var birthMonth = month[DOB.getMonth()]; <br>
-  
-
-if(birthDate < 10){ <br>
-     birthDate = "0"+birthDate; <br>
- } <br>
- if(birthMonth < 10){ <br>
-     birthMonth = "0"+birthMonth; <br>
- } <br>
-
-
- var hours = DOB.getHours(); <br>
- var minutes = DOB.getMinutes(); <br>
- var secs = DOB.getSeconds(); <br>
-  
-  
- if(hours < 10){ <br>
-     hours = "0"+hours; <br>
- } <br>
- if(minutes < 10){ <br>
-     minutes = "0"+minutes; <br>
- } <br>
- if(secs < 10){ <br>
-     secs = "0"+secs; <br>
- } <br>
-  
-  
-  print(birthDate); <br>
-  print(birthMonth); <br>
-  print(birthYear); <br>
-  print(birthDay); <br>
-  print(hours + ":"); <br>
-  print(minutes + ":"); <br>
-  print(secs); <br>
-
+```js
+var DOB = new Date("January 26, 1995 04:15:00");             
+var birthDate = DOB.getDate();             
+var birthYear = DOB.getFullYear();             
+var weekday = new Array(7);             
+  weekday[0] = "Sunday";             
+  weekday[1] = "Monday";             
+  weekday[2] = "Tuesday";             
+  weekday[3] = "Wednesday";             
+  weekday[4] = "Thursday";             
+  weekday[5] = "Friday";             
+  weekday[6] = "Saturday";             
+var birthDay = weekday[DOB.getDay()];             
+var month = new Array();             
+  month[0] = "January";             
+  month[1] = "February";             
+  month[2] = "March";             
+  month[3] = "April";             
+  month[4] = "May";             
+  month[5] = "June";             
+  month[6] = "July";             
+  month[7] = "August";             
+  month[8] = "September";             
+  month[9] = "October";             
+  month[10] = "November";             
+  month[11] = "December";             
+var birthMonth = month[DOB.getMonth()];             
+if(birthDate < 10){             
+     birthDate = "0"+birthDate;             
+ }             
+ if(birthMonth < 10){             
+     birthMonth = "0"+birthMonth;             
+ }             
+ var hours = DOB.getHours();             
+ var minutes = DOB.getMinutes();             
+ var secs = DOB.getSeconds();             
+ if(hours < 10){             
+     hours = "0"+hours;             
+ }             
+ if(minutes < 10){             
+     minutes = "0"+minutes;             
+ }             
+ if(secs < 10){             
+     secs = "0"+secs;             
+ }             
+  print(birthDate);             
+  print(birthMonth);             
+  print(birthYear);             
+  print(birthDay);             
+  print(hours + ":");             
+  print(minutes + ":");             
+  print(secs);             
+```
 
   #### OUTPUT
 
