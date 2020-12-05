@@ -71,14 +71,10 @@ Thursday
 const lArr = ["new", "hello", "group", "new", "one","hello"];
 const uniqueArr = Array.from(new Set(lArr));
 
-console.log(uniqueArr);           
-
-
-###### // OUTPUT                 
+console.log(uniqueArr);
+```
+==== OUTPUT     
 
 ["new", "hello", "group", "one"]
-
-
-```
 
 </details>
