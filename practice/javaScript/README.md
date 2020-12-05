@@ -75,7 +75,6 @@ console.log(uniqueArr);
 ```
 <ins> OUTPUT </ins>       
 
-'
-["new", "hello", "group", "one"]
-'
+' ["new", "hello", "group", "one"] '
+
 </details>
