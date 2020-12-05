@@ -65,7 +65,8 @@ Thursday
 </details>
 
 <details><summary> Remove Same Values Inside Array </summary>
-- This will not work for Nodeflow       
+- This will not work for Nodeflow          
+
 ```js
 const lArr = ["new", "hello", "group", "new", "one","hello"];
 const uniqueArr = Array.from(new Set(lArr));
@@ -76,3 +77,4 @@ console.log(uniqueArr);
 '
 ["new", "hello", "group", "one"]
 '
+</details>
