@@ -54,7 +54,7 @@ if(birthDate < 10){
   print(minutes + ":");             
   print(secs);             
 ```
----
+___
   >OUTPUT ==>> 26 January 1995 Thursday 04:15:00    
 
 </details>
