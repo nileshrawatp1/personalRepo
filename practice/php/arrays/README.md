@@ -20,6 +20,7 @@ ___
 <details><summary> Index Add Values Arrays </summary>
 
 ```php
+$cars = array('BMW', 'Audi', 'Tata');
 // ! Adding index to the last of cars var
 $cars[] = 'Honda';
 print_r($cars)."\n";
