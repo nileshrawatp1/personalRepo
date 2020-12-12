@@ -2,9 +2,9 @@ Table of Contents
 =================
 
 
-* [<ins>Helpful Codes</ins>](#helpful-codes)
-    * [<ins>Convert Date in Proper Form</ins>](#convert-date-in-proper-form)
-    * [<ins>Remove Same Values Inside Array</ins>](#remove-same-values-inside-array)
+
+* [<ins>Convert Date in Proper Form</ins>](#convert-date-in-proper-form)
+* [<ins>Remove Same Values Inside Array</ins>](#remove-same-values-inside-array)
 
 
 ### <ins>Convert Date in Proper Form</ins>
