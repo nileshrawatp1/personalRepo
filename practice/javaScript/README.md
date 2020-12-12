@@ -3,12 +3,11 @@ Table of Contents
 
 
 * [<ins>Helpful Codes</ins>](#helpful-codes)
-    * [Convert Date in Proper Form](#convert-date-in-proper-form)
-    * [Remove Same Values Inside Array](#remove-same-values-inside-array)
+    * [<ins>Convert Date in Proper Form</ins>](#convert-date-in-proper-form)
+    * [<ins>Remove Same Values Inside Array</ins>](#remove-same-values-inside-array)
 
 
-### <ins>Helpful Codes</ins>
-##### Convert Date in Proper Form
+### <ins>Convert Date in Proper Form</ins>
 
 ```js
 var DOB = new Date("January 26, 1995 04:15:00");             
@@ -69,7 +68,7 @@ ___
 ___
 
 
-##### Remove Same Values Inside Array
+### <ins>Remove Same Values Inside Array</ins>
 ==>> This will not work for Nodeflow          
                  
 ```js
