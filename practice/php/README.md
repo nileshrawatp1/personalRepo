@@ -17,3 +17,6 @@ $card_hashed = hash('sha256', $card_no.$hashing_salt);
 echo $card_hashed;
 
 ```
+> <ins>Output</ins>
+>
+>6b6ccc44d93b489c872f1869f6b6078aa44f1c23baee9f59afaade0c794b8ea0
