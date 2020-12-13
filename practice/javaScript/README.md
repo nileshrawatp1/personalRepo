@@ -66,7 +66,9 @@ if(birthDate < 10){
   print(secs);             
 ```
 ___
-  >OUTPUT ==>> 26 January 1995 Thursday 04:15:00      
+  > <ins>OUTPUT</ins>    
+  > 
+  >26 January 1995 Thursday 04:15:00      
 
 ___
 
@@ -83,7 +85,9 @@ console.log(uniqueArr);
 
 ____     
 
->Output ==>> ["new", "hello", "group", "one"]         
+> <ins>OUTPUT</ins>   
+> 
+> ["new", "hello", "group", "one"]         
      
 ___    
 
@@ -99,8 +103,9 @@ print(dt);
 
 ```
 ___
->Output ==>> Mon Dec 14 2020 09:54:57 GMT-0000 (GMT)
-
+> <ins>OUTPUT</ins>   
+>
+>Mon Dec 14 2020 09:54:57 GMT-0000 (GMT)    
 > 14
 ___
 
@@ -134,7 +139,9 @@ print(calcTime('Faridabad', '+5.5'));
 
 ___
 
-> 1607854729652       
+> <ins>OUTPUT</ins>   
+> 
+>1607854729652       
 >Sun Dec 13 2020 15:48:49 GMT-0000 (GMT)     
 >The local time for city Faridabad is December 13, 2020 at 3:48:49 PM GMT
 
@@ -185,4 +192,6 @@ print("IVR_loggin_cbDate ==> "+cbDate);
 // print("IVR_loggin_cbPhone="+cbPhone);
 
 ```
-> Output ==>> IVR_loggin_cbDate ==> 12/13/2020 10:54:14
+> <ins>OUTPUT</ins>   
+>
+> IVR_loggin_cbDate ==> 12/13/2020 10:54:14
