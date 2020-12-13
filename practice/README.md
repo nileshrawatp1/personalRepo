@@ -2,12 +2,14 @@ Whole Queries
 =================
 
    * [Table of Contents](#table-of-contents)   
-         * [<ins>[PHP]-Convert String to the Hash<ins></ins></ins>](#php-convert-string-to-the-hash)   
+         * [<ins>[PHP]-Convert String to the Hash<ins>](#php-convert-string-to-the-hash)   
+         * [<ins>[PHP]-Shorthand Ternary Operator<ins>](#php-shorthand-ternary-operator)    
+         * [<ins>[JS]-Shorthand Ternary Operator<ins>](#js-shorthand-ternary-operator)      
          * [<ins>[JS]-Convert Date in Proper Form</ins>](#js-convert-date-in-proper-form)   
          * [<ins>[JS]-Remove Same Values Inside Array</ins>](#js-remove-same-values-inside-array)   
-         * [<ins>[JS]-Add One Day Javascript<ins></ins></ins>](#js-add-one-day-javascript)   
-         * [<ins>[JS]-Get Local Time<ins></ins></ins>](#js-get-local-time)   
-         * [<ins>[JS]-Set Time Format<ins></ins></ins>](#js-set-time-format)    
+         * [<ins>[JS]-Add One Day Javascript<ins>](#js-add-one-day-javascript)   
+         * [<ins>[JS]-Get Local Time<ins>](#js-get-local-time)   
+         * [<ins>[JS]-Set Time Format<ins>](#js-set-time-format)    
 
 
 ### <ins>[PHP]-Convert String to the Hash<ins>    
@@ -26,6 +28,56 @@ echo $card_hashed;
 > <ins>Output</ins>
 >
 >6b6ccc44d93b489c872f1869f6b6078aa44f1c23baee9f59afaade0c794b8ea0
+
+
+### [PHP]-Shorthand Ternary Operator
+
+```php
+
+$action = 'working';
+
+    $vare = ($action == 'edit' ? 'Edit' : 
+            ($action == 'delete' ? 'Delete' : 
+            ($action == 'open' ? 'Open' : 
+            ($action == 'wow' ? 'Wow' : 
+            ($action == 'yes' ? 'Yes' : 
+            ($action == 'working' ? 'Working' : 
+            ($action == 'new' ? 'New' : 'Else')))))));
+
+    echo $vare;
+
+```
+___
+
+> <ins>Output</ins>
+> 
+> Working
+___
+
+
+### [JS]-Shorthand Ternary Operator
+
+```js
+
+var mainMenuInput = '2';
+
+var playPrompt = 
+  mainMenuInput == '1' ? "playCancellation"
+: mainMenuInput == '2' ? "playReturnAfterThreeSec"
+: mainMenuInput == '3' ? "playRefund" : 'wrong';
+var inputDump = mainMenuInput+" : "+playPrompt;
+
+print("playPromptName ==>> "+playPrompt);
+
+```
+
+___
+
+> <ins>Output</ins>
+> 
+> playPromptName ==>> playReturnAfterThreeSec
+___
+
 
 ### <ins>[JS]-Convert Date in Proper Form</ins>
 
