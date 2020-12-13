@@ -1,10 +1,13 @@
 Table of Contents
 =================
 
+   * [Table of Contents](#table-of-contents)  
+         * [<ins>Convert Date in Proper Form</ins>](#convert-date-in-proper-form)  
+         * [<ins>Remove Same Values Inside Array</ins>](#remove-same-values-inside-array)  
+         * [<ins>Add One Day Javascript<ins></ins></ins>](#add-one-day-javascript)  
+         * [<ins> Get Local Time <ins></ins></ins>](#-get-local-time-)  
+         * [<ins>Set Time Format<ins></ins></ins>](#set-time-format)  
 
-
-* [<ins>Convert Date in Proper Form</ins>](#convert-date-in-proper-form)
-* [<ins>Remove Same Values Inside Array</ins>](#remove-same-values-inside-array)
 
 
 ### <ins>Convert Date in Proper Form</ins>
@@ -83,3 +86,103 @@ ____
 >Output ==>> ["new", "hello", "group", "one"]         
      
 ___    
+
+### <ins>Add One Day Javascript<ins>
+
+```js
+var tomorrow = new Date();
+tomorrow.setDate(tomorrow.getDate() + 1);
+dt = tomorrow.getDate();
+
+print(tomorrow);
+print(dt);
+
+```
+___
+>Output ==>> Mon Dec 14 2020 09:54:57 GMT-0000 (GMT)
+
+> 14
+___
+
+
+### <ins> Get Local Time <ins>
+
+```js
+
+function calcTime(city, offset) {
+    // create Date object for current location
+    var d = new Date();
+
+    // convert to msec
+    // subtract local time zone offset
+    // get UTC time in msec
+    var utc = d.getTime() + (d.getTimezoneOffset() * 60000);
+    print(utc);
+
+    // create new Date object for different city
+    // using supplied offset
+    var nd = new Date(utc + (3600000*offset));
+    print(nd);
+
+    // return time as a string
+    return "The local time for city "+ city +" is "+ nd.toLocaleString();
+}
+
+print(calcTime('Faridabad', '+5.5'));
+
+```
+
+___
+
+> 1607854729652       
+>Sun Dec 13 2020 15:48:49 GMT-0000 (GMT)     
+>The local time for city Faridabad is December 13, 2020 at 3:48:49 PM GMT
+
+___
+
+
+### <ins>Set Time Format<ins>
+
+```js
+
+var srcPhone = "+919999775879";
+var cli  = srcPhone.substr(-10);
+var thisdat;
+thisdat=new Date();
+
+var thisdate=new Date(parseInt(thisdat.getTime())+parseInt(300000));
+var yearWithoutOffset =  parseInt(thisdate.getYear()) + parseInt(1900);
+var monthWithoutOffset = parseInt(thisdate.getMonth()) + parseInt(1);
+
+if (monthWithoutOffset< 10){
+        monthWithoutOffset='0'+monthWithoutOffset;
+}
+var dt;
+ dt=thisdate.getDate();
+if (dt< 10){
+       dt='0'+dt;
+}
+var hr;
+hr=thisdate.getHours();
+if (hr< 10){
+       hr='0'+hr;
+}
+var min;
+min= thisdate.getMinutes();
+ 
+ if (min< 10){
+       min='0'+min;
+}
+var sec;
+sec=thisdate.getSeconds();
+if (sec< 10){
+       sec='0'+sec;
+}
+cbDate=monthWithoutOffset+'/'+dt+'/'+yearWithoutOffset+' '+hr+':'+min+':'+sec;
+ 
+print("IVR_loggin_cbDate ==> "+cbDate);
+// print("IVR_loggin_campId="+campId);
+// print("IVR_loggin_cbPhone="+cbPhone);
+
+```
+> Output ==>> IVR_loggin_cbDate ==> 12/13/2020 10:54:14
