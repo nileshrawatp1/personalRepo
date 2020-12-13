@@ -98,15 +98,15 @@ var tomorrow = new Date();
 tomorrow.setDate(tomorrow.getDate() + 1);
 dt = tomorrow.getDate();
 
-print(tomorrow);
-print(dt);
+print("Next Day Date =>> "+tomorrow);
+print("Next Day Only-Date =>> "+dt);
 
 ```
 ___
 > <ins>OUTPUT</ins>   
 >
->Mon Dec 14 2020 09:54:57 GMT-0000 (GMT)    
-> 14
+>Next Day Date =>> Mon Dec 14 2020 11:22:14 GMT-0000 (GMT)   
+>Next Day Only-Date =>> 14   
 ___
 
 
@@ -122,15 +122,15 @@ function calcTime(city, offset) {
     // subtract local time zone offset
     // get UTC time in msec
     var utc = d.getTime() + (d.getTimezoneOffset() * 60000);
-    print(utc);
+    print("Millisecond ==>> "+utc);
 
     // create new Date object for different city
     // using supplied offset
     var nd = new Date(utc + (3600000*offset));
-    print(nd);
+    print("Exact Time ==>> "+nd);
 
     // return time as a string
-    return "The local time for city "+ city +" is "+ nd.toLocaleString();
+    return "The local time for city "+ city +" is ==>> "+ nd.toLocaleString();
 }
 
 print(calcTime('Faridabad', '+5.5'));
@@ -141,9 +141,9 @@ ___
 
 > <ins>OUTPUT</ins>   
 > 
->1607854729652       
->Sun Dec 13 2020 15:48:49 GMT-0000 (GMT)     
->The local time for city Faridabad is December 13, 2020 at 3:48:49 PM GMT
+>Millisecond ==>> 1607858395749   
+>Exact Time ==>> Sun Dec 13 2020 16:49:55 GMT-0000 (GMT)   
+>The local time for city Faridabad is ==>> December 13, 2020 at 4:49:55 PM GMT   
 
 ___
 
