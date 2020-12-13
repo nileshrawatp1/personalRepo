@@ -61,11 +61,9 @@ ___
 
 var mainMenuInput = '2';
 
-var playPrompt = 
-  mainMenuInput == '1' ? "playCancellation"
-: mainMenuInput == '2' ? "playReturnAfterThreeSec"
-: mainMenuInput == '3' ? "playRefund" : 'wrong';
-var inputDump = mainMenuInput+" : "+playPrompt;
+var playPrompt = mainMenuInput == '1' ? "playCancellation" :
+                 mainMenuInput == '2' ? "playReturnAfterThreeSec" :
+                 mainMenuInput == '3' ? "playRefund" : 'wrong';
 
 print("playPromptName ==>> "+playPrompt);
 
