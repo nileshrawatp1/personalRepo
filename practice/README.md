@@ -4,6 +4,7 @@ Whole Queries
    * [Table of Contents](#table-of-contents)   
          * [<ins>[PHP]-Convert String to the Hash<ins>](#php-convert-string-to-the-hash)   
          * [<ins>[PHP]-Shorthand Ternary Operator<ins>](#php-shorthand-ternary-operator)    
+         * [<ins>[PHP]-Date and Time<ins>](#php-date-and-time)    
          * [<ins>[JS]-Shorthand Ternary Operator<ins>](#js-shorthand-ternary-operator)      
          * [<ins>[JS]-Convert Date in Proper Form</ins>](#js-convert-date-in-proper-form)   
          * [<ins>[JS]-Remove Same Values Inside Array</ins>](#js-remove-same-values-inside-array)   
@@ -53,6 +54,36 @@ ___
 > 
 > Working
 ___
+
+
+### [PHP]-Date and Time
+
+```php
+
+echo date('d') . "<br>";  // day
+echo date('m') . "<br>";  // month
+echo date('Y') . "<br>";  // full year
+echo date('y') . "<br>";  // two Letter year
+echo date('l') . "<br>";  // day of weak
+echo date('Y/m/d') . "<br>";  // full date  yyyy/mm/dd
+echo date('m-d-y') . "<br>";  // full date  mm-dd-yy
+
+```
+
+___
+
+> <ins>Output</ins>
+> 
+> 17     
+> 12       
+> 2020   
+> 20   
+> Thursday   
+> 2020/12/17   
+> 12-17-20   
+> 
+___
+
 
 
 ### [JS]-Shorthand Ternary Operator
