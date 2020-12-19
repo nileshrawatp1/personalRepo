@@ -9,7 +9,7 @@
             * [5. Convert a string to all uppercase ==&gt;&gt; strtoupper()](#5-convert-a-string-to-all-uppercase--strtoupper)     
             * [6. Convert a string to all Lowercase ==&gt;&gt; strtolower()](#6-convert-a-string-to-all-lowercase--strtolower)     
             * [7. To make capital First word of a string ==&gt;&gt; ucword()](#7-to-make-capital-first-word-of-a-string--ucword)     
-            * [8. To replace one letter or one word ==&gt;&gt; str_replace('wordToBeReplaced', 'wordWhichWillReplace', $var)]     (#8-to-replace-one-letter-or-one-word--str_replacewordtobereplaced-wordwhichwillreplace-var)     
+            * [8. To replace one letter or one word ==&gt;&gt; str_replace('wordToBeReplaced', 'wordWhichWillReplace', $var)] (#8-to-replace-one-letter-or-one-word--str_replacewordtobereplaced-wordwhichwillreplace-var)     
             * [9. To Check if its string or not ==&gt;&gt; is_string()](#9-to-check-if-its-string-or-not--is_string)     
             * [10. To check values under array is string or not.](#10-to-check-values-under-array-is-string-or-not)     
             * [11. To Compress and deCompress ==&gt;&gt; gzcompress() &amp;&amp; gzdecompress()](#11-to-compress-and-decompress--gzcompress--gzdecompress)     
