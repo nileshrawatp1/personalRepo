@@ -97,11 +97,11 @@ echo ucwords($txt);
 ```
 > Hello New World
 
-#### 8. To replace one letter or one word ==>> str_replace()
-* Getting Particular part of a string 
-    - **First** is the word you want to replace.
-    - **Second** is the word which will be the new word.
-    - **Third** is the input or variable.
+#### 8. To replace one letter or one word ==>> str_replace()     
+* Getting Particular part of a string      
+    - **First** is the word you want to replace.     
+    - **Second** is the word which will be the new word.     
+    - **Third** is the input or variable.     
 ```php
 >$txt = 'hello new world';
 echo str_replace('o', 'z', $txt);
