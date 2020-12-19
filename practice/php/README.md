@@ -155,3 +155,32 @@ echo $compressed;
 $decompressed = gzuncompress($compressed);
 echo $decompressed;
 ```
+> sgdvfjyrfbuytuygjkugjbgukyiluikytdrxcyvbjkjljhfgxgcgvhjmkl,n nbkl vhjnkljmnbv   
+
+
+# <ins> Ternary Operators </ins>
+#### 1. if-else Conditions   
+```php
+$input = "18";
+$pressed = ($input == '1' ? 'yes' : 'no');
+
+echo $pressed;
+```
+> no   
+
+
+
+#### 2. if-elseif Conditions   
+```php
+$input = "3";
+
+$acd = ($input == '1' ? 'one'   : 
+       ($input == '2' ? 'two'   :
+       ($input == '3' ? 'three' :
+       ($input == '4' ? 'four'  :
+       ($input == '5' ? 'five'  : 
+       'NotValid')))));
+       
+echo $acd;
+```
+> three   
