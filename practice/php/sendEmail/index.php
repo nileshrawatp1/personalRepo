@@ -7,7 +7,7 @@
     if(filter_has_var(INPUT_POST, 'submit')){
 
         // ? Get Form Data.
-        // * htmlspecialchars() used to convert all script tags (<h2>) to &lt;b&gt; Used for security.
+        // * htmlspecialchars() used to convert all script tags (<script>) to &lt;b&gt; Used for security.
         $name = htmlspecialchars($_POST['name']);
         $email = htmlspecialchars($_POST['email']);
         $message = htmlspecialchars($_POST['message']);
