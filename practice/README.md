@@ -5,6 +5,7 @@ Whole Queries
          * [<ins>[PHP]-Convert String to the Hash](#php-convert-string-to-the-hash)    
          * [<ins>[PHP]-Shorthand Ternary Operator](#php-shorthand-ternary-operator)    
          * [<ins>[PHP]-Date and Time](#php-date-and-time)    
+         * [[JS]-To Hide OR Unhide div on some dropdown value](#js-to-hide-or-unhide-div-on-some-dropdown-value)         
          * [<ins>[JS]-Shorthand Ternary Operator](#js-shorthand-ternary-operator)    
          * [<ins>[JS]-Convert Date in Proper Form</ins>](#js-convert-date-in-proper-form)    
          * [<ins>[JS]-Remove Same Values Inside Array</ins>](#js-remove-same-values-inside-array)    
@@ -188,6 +189,23 @@ echo date('d-m-Y h:i:sa', $addFiveMins).'<br>';
 > **// Added Five Minutes**     
 > 18-12-2020 01:33:18pm  
 
+
+### [JS]-To Hide OR Unhide div on some dropdown value
+
+
+```js
+$(document).ready(function(){
+  $("#commentId").hide();
+    $('#late_reason').on('change', function() {
+      if (this.value == 'Others' || this.value == ("Technical Issue")){
+        $("#commentId").show();
+      } else {
+        $("#commentId").hide();
+      }
+    });
+});
+
+```
 
 ### [JS]-Shorthand Ternary Operator
 
