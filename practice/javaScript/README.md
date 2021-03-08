@@ -1,6 +1,7 @@
-Table of Contents    
-=================
+Javascript Queries
+==================
 
+   * [Table of Contents](#table-of-contents)    
          * [<ins>Working With Arrays for Inputs<ins></ins></ins>](#working-with-arrays-for-inputs)    
          * [<ins>To Hide OR Unhide div on some dropdown value</ins>](#to-hide-or-unhide-div-on-some-dropdown-value)    
          * [<ins>Shorthand Ternary Operator</ins>](#shorthand-ternary-operator)    
@@ -8,7 +9,7 @@ Table of Contents
          * [<ins>Remove Same Values Inside Array</ins>](#remove-same-values-inside-array)    
          * [<ins>Add One Day Javascript<ins></ins></ins>](#add-one-day-javascript)    
          * [<ins>Get Local Time<ins></ins></ins>](#get-local-time)    
-         * [<ins>Set Time Format<ins></ins></ins>](#set-time-format)    
+         * [<ins>Set Time Format<ins></ins></ins>](#set-time-format)      
 
 ### <ins>Working With Arrays for Inputs<ins>     
 
