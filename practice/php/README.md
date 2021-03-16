@@ -3,6 +3,7 @@ Table of Contents
 
    * [Table of Contents](#table-of-contents)     
    * [<ins> Comman String Functions </ins>](#-comman-string-functions-)     
+            * [Get the selected in dropdown for Loops](#get-the-selected-in-dropdown-for-loops)     
             * [1. Get Particular Part Of a String ==&gt;&gt; substr()](#1-get-particular-part-of-a-string--substr)     
             * [2. To get the length of a string ==&gt;&gt; strlen($var)](#2-to-get-the-length-of-a-string--strlenvar)     
             * [3. To find the index of any particular letter in a String ==&gt;&gt; strpos($var, 'word')](#3-to-find-the-index-of-any-particular-letter-in-a-string--strposvar-word)     
@@ -16,6 +17,45 @@ Table of Contents
             * [11. To Compress and deCompress ==&gt;&gt; gzcompress() &amp;&amp; gzdecompress()](#11-to-compress-and-decompress--gzcompress--gzdecompress)              
 
 
+# <ins>Get the selected in dropdown for Loops</ins>
+
+```php
+    <td width="5%" ></td>
+    <td width="16%" class="textlight">Center </td>
+    <td width="2%" >:</td>
+    <td width="27%" class="textdark">
+    <?php
+    $host = "localhost";
+    $port = "5432";
+    $dbname = "ameyodb";
+    $user = "postgres";
+    $connection = pg_connect("host=$host user=$user password=$password dbname=$dbname");
+    $query = pg_query("SELECT * FROM center ORDER BY center ASC");
+    $rowCount = pg_num_rows($query);
+    ?>
+
+<select class="form-control" name="center" id="id">
+    <option value="">Select Center</option>
+        <?php
+            if($rowCount > 0)
+            {
+                while($row = pg_fetch_array($query))
+                {
+                    if($data['center_name'] == $row['center'])
+                    {
+                        echo '<option value="'.$row['id'].'" selected>'.$row['center'].'</option>';
+                    } else 
+                    {
+                        echo '<option value="'.$row['id'].'">'.$row['center'].'</option>';
+                    }
+                }
+            }
+        ?>
+        <?php if(!empty($center)) :?>
+    <option value="<?php echo $center['center'];?>" selected><?php echo $center; ?> </option>
+        <?php endif;?>
+</select>
+```
 # <ins> Comman String Functions </ins>
 
 #### 1. Get Particular Part Of a String ==>> `substr()`
