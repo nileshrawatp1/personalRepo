@@ -25,13 +25,13 @@ Table of Contents
     <td width="2%" >:</td>
     <td width="27%" class="textdark">
     <?php
-    $host = "localhost";
-    $port = "5432";
-    $dbname = "ameyodb";
-    $user = "postgres";
-    $connection = pg_connect("host=$host user=$user password=$password dbname=$dbname");
-    $query = pg_query("SELECT * FROM center ORDER BY center ASC");
-    $rowCount = pg_num_rows($query);
+        $host = "localhost";
+        $port = "5432";
+        $dbname = "ameyodb";
+        $user = "postgres";
+        $connection = pg_connect("host=$host user=$user password=$password dbname=$dbname");
+        $query = pg_query("SELECT * FROM center ORDER BY center ASC");
+        $rowCount = pg_num_rows($query);
     ?>
 
 <select class="form-control" name="center" id="id">
