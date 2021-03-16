@@ -20,19 +20,19 @@ Table of Contents
 # <ins>Get the selected in dropdown for Loops</ins>
 
 ```php
-    <td width="5%" ></td>
-    <td width="16%" class="textlight">Center </td>
-    <td width="2%" >:</td>
-    <td width="27%" class="textdark">
-    <?php
-        $host = "localhost";
-        $port = "5432";
-        $dbname = "ameyodb";
-        $user = "postgres";
-        $connection = pg_connect("host=$host user=$user password=$password dbname=$dbname");
-        $query = pg_query("SELECT * FROM center ORDER BY center ASC");
-        $rowCount = pg_num_rows($query);
-    ?>
+<td width="5%" ></td>
+<td width="16%" class="textlight">Center </td>
+<td width="2%" >:</td>
+<td width="27%" class="textdark">
+<?php
+    $host = "localhost";
+    $port = "5432";
+    $dbname = "ameyodb";
+    $user = "postgres";
+    $connection = pg_connect("host=$host user=$user password=$password dbname=$dbname");
+    $query = pg_query("SELECT * FROM center ORDER BY center ASC");
+    $rowCount = pg_num_rows($query);
+?>
 
 <select class="form-control" name="center" id="id">
     <option value="">Select Center</option>
