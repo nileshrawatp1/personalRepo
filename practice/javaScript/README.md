@@ -313,7 +313,7 @@ console.log(personDetails.level);
 > {fname: "Nilesh", lname: "Rawat", role: "Developer", leve: "junior"}   
 > junior   
 
-    ` In Case of Same keys in both objects then it will store the last key values `    
+ **NOTE:** *In Case of Same keys in both objects then it will store the last key values*
 
 ```js
 var person = {
