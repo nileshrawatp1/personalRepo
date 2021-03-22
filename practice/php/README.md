@@ -1,9 +1,9 @@
 Table of Contents
 =================
 
-   * [Table of Contents](#table-of-contents)     
+* [Table of Contents](#table-of-contents)     
 * [<ins>Get the selected in dropdown for Loops</ins>](#get-the-selected-in-dropdown-for-loops)                  
-    * [<ins> Comman String Functions </ins>](#-comman-string-functions-)     
+* [<ins> Comman String Functions </ins>](#-comman-string-functions-)     
         * [1. Get Particular Part Of a String ==&gt;&gt; substr()](#1-get-particular-part-of-a-string--substr)     
         * [2. To get the length of a string ==&gt;&gt; strlen($var)](#2-to-get-the-length-of-a-string--strlenvar)     
         * [3. To find the index of any particular letter in a String ==&gt;&gt; strpos($var, 'word')](#3-to-find-the-index-of-any-particular-letter-in-a-string--strposvar-word)     
