@@ -306,24 +306,6 @@ var personDetails = {
 };
 
 console.log(personDetails);
-var person = {
-    fname: 'Nilesh',
-    lname: 'Rawat'
-};
-
-var job = {
-    role: 'Developer',
-    level: 'junior'
-};
-
-// ! To merge two different Objectd using ```...```
-
-var personDetails = {
-    ...person,
-    ...job
-};
-
-console.log(personDetails);
 console.log(personDetails.level);
 ```
 > {fname: "Nilesh", lname: "Rawat", role: "Developer", leve: "junior"}   
