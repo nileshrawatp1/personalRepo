@@ -313,4 +313,5 @@ console.log(personDetails.level);
 > {fname: "Nilesh", lname: "Rawat", role: "Developer", leve: "junior"}   
 > junior   
 
-**Merging Arrays**
+2. **Merging Arrays**
+3. ***Merging Arrays***
