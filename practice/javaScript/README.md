@@ -287,7 +287,7 @@ print("IVR_loggin_cbDate ==> "+cbDate);
 
 ### <ins>Merging Two Objects Or Arrays<ins>     
 
-**Merging Objects**
+1. **Merging Objects**
 
 ```js
 var person = {
