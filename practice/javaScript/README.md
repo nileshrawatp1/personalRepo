@@ -313,5 +313,30 @@ console.log(personDetails.level);
 > {fname: "Nilesh", lname: "Rawat", role: "Developer", leve: "junior"}   
 > junior   
 
-2. **Merging Arrays**
-3. ***Merging Arrays***
+    ` In Case of Same keys in both objects then it will store the last key values `    
+
+```js
+var person = {
+    fname: 'Nilesh',
+    lname: 'Rawat'
+};
+
+var person1 = {
+    fname: 'Kapil',
+    lname: 'Singh'
+};
+
+// ! To merge two different Objectd using ```...```
+
+var personDetails = {
+    ...person,
+    ...person1
+};
+
+console.log(personDetails);
+console.log(personDetails.fname);
+```
+> {fname: "Kapil", lname: "Singh"}    
+> Kapil    
+
+2. **Merging Arrays**       
