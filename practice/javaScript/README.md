@@ -350,3 +350,17 @@ var details = [...person, ...job];
 console.log(details);
 ```
 > ["Nilesh", "Rawat", "Ameyo", "Gurgaon"]   
+
+### <ins>Distructuring(important) Objects and Arrays</ins>     
+
+```js
+var array = ['Nilesh', 'Rawat'];
+// array destructuring
+var [firstElement, secondElement] = array;
+console.log(firstElement, secondElement);
+console.log(firstElement);
+console.log(secondElement);
+> Nilesh Rawat   
+> Nilesh   
+> Rawat   
+```

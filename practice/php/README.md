@@ -223,4 +223,13 @@ $acd = ($input == '1' ? 'one'   :
        
 echo $acd;
 ```
-> three   
+> three     
+
+# <ins>PHP OOPS Concepts</ins>    
+1. The  PHP Object-Oriented Programming concepts are:    
+    - Class 
+    - Objects
+    - Inheritance
+    - Interface
+    - Abstraction
+    - Magic Methods
