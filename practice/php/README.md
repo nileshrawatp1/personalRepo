@@ -2,19 +2,11 @@ Table of Contents
 =================
 
    * [Table of Contents](#table-of-contents)     
-   * [<ins> Comman String Functions </ins>](#-comman-string-functions-)     
-            * [Get the selected in dropdown for Loops](#get-the-selected-in-dropdown-for-loops)     
-            * [1. Get Particular Part Of a String ==&gt;&gt; substr()](#1-get-particular-part-of-a-string--substr)     
-            * [2. To get the length of a string ==&gt;&gt; strlen($var)](#2-to-get-the-length-of-a-string--strlenvar)     
-            * [3. To find the index of any particular letter in a String ==&gt;&gt; strpos($var, 'word')](#3-to-find-the-index-of-any-particular-letter-in-a-string--strposvar-word)     
-            * [4. To remove All The Space in String ==&gt;&gt; trim()](#4-to-remove-all-the-space-in-string--trim)     
-            * [5. Convert a string to all uppercase ==&gt;&gt; strtoupper()](#5-convert-a-string-to-all-uppercase--strtoupper)     
-            * [6. Convert a string to all Lowercase ==&gt;&gt; strtolower()](#6-convert-a-string-to-all-lowercase--strtolower)     
-            * [7. To make capital First word of a string ==&gt;&gt; ucword()](#7-to-make-capital-first-word-of-a-string--ucword)     
-            * [8. To replace one letter or one word ==&gt;&gt; str_replace()](#8-to-replace-one-letter-or-one-word--str_replace)     
-            * [9. To Check if its string or not ==&gt;&gt; is_string()](#9-to-check-if-its-string-or-not--is_string)     
-            * [10. To check values under array is string or not.](#10-to-check-values-under-array-is-string-or-not)     
-            * [11. To Compress and deCompress ==&gt;&gt; gzcompress() &amp;&amp; gzdecompress()](#11-to-compress-and-decompress--gzcompress--gzdecompress)              
+    * [<ins>Get the selected in dropdown for Loops</ins>](#get-the-selected-in-dropdown-for-loops)                  
+    * [<ins> Comman String Functions </ins>](#-comman-string-functions-)     
+    * [<ins> Ternary Operators </ins>](#-ternary-operators-)      
+    * [<ins> PHP OOPS Concepts </ins>](#<ins>-php-oops-concepts-)
+   
 
 
 # <ins>Get the selected in dropdown for Loops</ins>
@@ -225,7 +217,7 @@ echo $acd;
 ```
 > three     
 
-# <ins>PHP OOPS Concepts</ins>    
+# <ins> PHP OOPS Concepts </ins>    
 1. The  PHP Object-Oriented Programming concepts are:    
     - Class 
     - Objects
