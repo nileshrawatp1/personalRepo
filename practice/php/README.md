@@ -22,7 +22,7 @@ Table of Contents
    
 
 
-# <-php-oops-concepts->Get the selected in dropdown for Loops</-php-oops-concepts->
+# <ins>Get the selected in dropdown for Loops</ins>
 
 ```php
 <td width="5%" ></td>
