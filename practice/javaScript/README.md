@@ -287,6 +287,8 @@ print("IVR_loggin_cbDate ==> "+cbDate);
 
 ### <ins>Merging Two Objects Or Arrays<ins>     
 
+**Merging Objects**
+
 ```js
 var person = {
     fname: 'Nilesh',
@@ -310,3 +312,5 @@ console.log(personDetails.level);
 ```
 > {fname: "Nilesh", lname: "Rawat", role: "Developer", leve: "junior"}   
 > junior   
+
+**Merging Arrays**
