@@ -18,11 +18,11 @@ Table of Contents
     * [<ins> **Ternary Operators** </ins>](#-ternary-operators-)      
             * [1. if-else Conditions](#1-if-else-conditions)     
             * [2. if-elseif Conditions](#2-if-elseif-conditions)     
-    * [<ins> **PHP OOPS Concepts** </ins>](#<ins>-php-oops-concepts-)
+    * [<ins> **PHP OOPS Concepts** </ins>](#-php-oops-concepts-)
    
 
 
-# <ins>Get the selected in dropdown for Loops</ins>
+# <-php-oops-concepts->Get the selected in dropdown for Loops</-php-oops-concepts->
 
 ```php
 <td width="5%" ></td>
