@@ -283,3 +283,47 @@ print("IVR_loggin_cbDate ==> "+cbDate);
 > <ins>OUTPUT</ins>   
 >
 > IVR_loggin_cbDate ==> 12/13/2020 10:54:14
+
+### <ins>Merging Two Objects Or Arrays<ins>     
+
+```js
+var person = {
+    fname: 'Nilesh',
+    lname: 'Rawat'
+};
+
+var job = {
+    role: 'Developer',
+    leve: 'junior'
+};
+
+// ! To merge two different Objectd using ```...```
+
+var personDetails = {
+    ...person,
+    ...job
+};
+
+console.log(personDetails);
+var person = {
+    fname: 'Nilesh',
+    lname: 'Rawat'
+};
+
+var job = {
+    role: 'Developer',
+    level: 'junior'
+};
+
+// ! To merge two different Objectd using ```...```
+
+var personDetails = {
+    ...person,
+    ...job
+};
+
+console.log(personDetails);
+console.log(personDetails.level);
+```
+> {fname: "Nilesh", lname: "Rawat", role: "Developer", leve: "junior"}   
+> junior   
