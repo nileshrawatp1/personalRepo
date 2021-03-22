@@ -11,6 +11,7 @@ Javascript Queries
          * [<ins>Get Local Time<ins></ins></ins>](#get-local-time)    
          * [<ins>Set Time Format<ins></ins></ins>](#set-time-format)      
          * [<ins>Merging Two Objects Or Arrays<ins>](#merging-two-objects-or-arrays)      
+         * [<ins>Distructuring(important) Objects and Arrays</ins>](#distructuringimportant-objects-and-arrays)    
 
 ### <ins>Working With Arrays for Inputs<ins>     
 
