@@ -2,7 +2,7 @@ Table of Contents
 =================
 
 * [**Table of Contents**](#table-of-contents)     
-    * [<ins> **Get the selected in dropdown for Loops** </ins>](#-get-the-selected-in-dropdown-for-loops-)                  
+    * [<ins>**Get the selected in dropdown for Loops**</ins>](#get-the-selected-in-dropdown-for-loops)          
     * [<ins> **Comman String Functions** </ins>](#-comman-string-functions-)     
             * [1. Get Particular Part Of a String ==&gt;&gt; substr()](#1-get-particular-part-of-a-string--substr)     
             * [2. To get the length of a string ==&gt;&gt; strlen($var)](#2-to-get-the-length-of-a-string--strlenvar)     
