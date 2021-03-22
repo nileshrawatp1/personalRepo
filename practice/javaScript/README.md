@@ -10,6 +10,7 @@ Javascript Queries
          * [<ins>Add One Day Javascript<ins></ins></ins>](#add-one-day-javascript)    
          * [<ins>Get Local Time<ins></ins></ins>](#get-local-time)    
          * [<ins>Set Time Format<ins></ins></ins>](#set-time-format)      
+         * [<ins>Merging Two Objects Or Arrays<ins>](#merging-two-objects-or-arrays)      
 
 ### <ins>Working With Arrays for Inputs<ins>     
 
