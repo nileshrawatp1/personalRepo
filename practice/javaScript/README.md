@@ -340,3 +340,13 @@ console.log(personDetails.fname);
 > Kapil    
 
 2. **Merging Arrays**       
+
+```js
+var person = ['Nilesh', 'Rawat'];
+var job = ['Ameyo', 'Gurgaon'];
+// ! Merging Two Arrays
+var details = [...person, ...job];
+
+console.log(details);
+```
+> ["Nilesh", "Rawat", "Ameyo", "Gurgaon"]   
