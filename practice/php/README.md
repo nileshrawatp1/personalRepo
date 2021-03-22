@@ -2,7 +2,7 @@ Table of Contents
 =================
 
    * [Table of Contents](#table-of-contents)     
-    * [<ins>Get the selected in dropdown for Loops</ins>](#get-the-selected-in-dropdown-for-loops)                  
+* [<ins>Get the selected in dropdown for Loops</ins>](#get-the-selected-in-dropdown-for-loops)                  
     * [<ins> Comman String Functions </ins>](#-comman-string-functions-)     
         * [1. Get Particular Part Of a String ==&gt;&gt; substr()](#1-get-particular-part-of-a-string--substr)     
         * [2. To get the length of a string ==&gt;&gt; strlen($var)](#2-to-get-the-length-of-a-string--strlenvar)     
@@ -15,10 +15,10 @@ Table of Contents
         * [9. To Check if its string or not ==&gt;&gt; is_string()](#9-to-check-if-its-string-or-not--is_string)     
         * [10. To check values under array is string or not.](#10-to-check-values-under-array-is-string-or-not)     
         * [11. To Compress and deCompress ==&gt;&gt; gzcompress() &amp;&amp; gzdecompress()](#11-to-compress-and-decompress--gzcompress--gzdecompress)     
-    * [<ins> Ternary Operators </ins>](#-ternary-operators-)      
+* [<ins> Ternary Operators </ins>](#-ternary-operators-)      
         * [1. if-else Conditions](#1-if-else-conditions)     
         * [2. if-elseif Conditions](#2-if-elseif-conditions)     
-    * [<ins> PHP OOPS Concepts </ins>](#<ins>-php-oops-concepts-)
+* [<ins> PHP OOPS Concepts </ins>](#<ins>-php-oops-concepts-)
    
 
 
