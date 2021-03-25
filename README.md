@@ -2,8 +2,9 @@ Table of Contents
 =================
 
    * [Table of Contents](#table-of-contents)       
-         * [<ins>Dependent State City Dropdowns India<ins></ins></ins>](#dependent-state-city-dropdowns-india)       
          * [<ins><ins>Filter SQL Queries</ins></ins></ins>](#filter-sql-queries)       
+         * [<ins>Dependent State City Dropdowns India<ins></ins></ins>](#dependent-state-city-dropdowns-india)       
+         
 
 
 ### <ins>Filter SQL Queries</ins>      
