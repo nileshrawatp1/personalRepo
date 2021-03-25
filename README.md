@@ -1,7 +1,8 @@
 # Table of Contents
 
 - [Table of Contents](#table-of-contents)  
-   \_ [<ins><ins>Filter SQL Queries</ins></ins></ins>](#filter-sql-queries)
+   * [<ins><ins>Filter SQL Queries</ins></ins></ins>](#filter-sql-queries)  
+
 
 ### <ins>Filter SQL Queries</ins>
 
