@@ -13,6 +13,7 @@ Javascript Queries
          * [<ins>Merging Two Objects Or Arrays<ins>](#merging-two-objects-or-arrays)      
          * [<ins>Distructuring(important) Objects and Arrays</ins>](#distructuringimportant-objects-and-arrays)    
          * [<ins>Dependent State City Dropdowns India<ins></ins></ins>](#dependent-state-city-dropdowns-india)       
+         * [<ins>Pick Random Number</ins>](#pick-random-number)  
 
 ### <ins>Working With Arrays for Inputs<ins>     
 
@@ -429,4 +430,32 @@ var stateData = {
         };
         };
 
+```
+### <ins>Pick Random Number</ins>  
+- It will pick the random number between 1-10.  
+- Here `10` is the number for highest number limit and we are adding `1` so that we dont get the 0 value to be choosen.  
+```js
+var nums = ["","+918068790094","+918068790095","+918068790096","+918068790097","+918068790098","+912265056500","+912265056499","+912265056494","+912265056493","+912265056492"];
+var randomNum = Math.floor(Math.random() * 10) + 1;
+
+var callID = nums[randomNum];
+print(callID);
+```
+- To Pick Between two Numbers.  
+```js
+var min = 10;
+var max = 30;
+
+// Between any two numbers
+var betweenTwoNum = Math.floor(Math.random() * (max - min + 1)) + min;
+
+// Between 0 and max
+var betweenZeroAndMax = Math.floor(Math.random() * (max + 1));
+
+// Between 1 and max
+var betweenOneAndMax = Math.floor(Math.random() * max) + 1;
+
+print('betweenTwoNum ==>> '+betweenTwoNum);
+print('betweenZeroAndMax ==>> '+betweenZeroAndMax);
+print('betweenOneAndMax ==>> '+betweenOneAndMax);
 ```
