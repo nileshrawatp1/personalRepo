@@ -200,8 +200,8 @@ print('talkTime ==>> '+talkTime);
 
 > <ins>OUTPUT</ins>
 > 
->ivrTym ==> 2
->talkTime ==>> 00:00:14.9
+>ivrTym ==> 2    
+>talkTime ==>> 00:00:14.9   
 
 ### <ins>Remove Same Values Inside Array</ins>
 ==>> This will not work for Nodeflow          
