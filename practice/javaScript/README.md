@@ -6,6 +6,7 @@ Javascript Queries
          * [<ins>To Hide OR Unhide div on some dropdown value</ins>](#to-hide-or-unhide-div-on-some-dropdown-value)    
          * [<ins>Shorthand Ternary Operator</ins>](#shorthand-ternary-operator)    
          * [<ins>Convert Date in Proper Form</ins>](#convert-date-in-proper-form)    
+         * [<ins>Get Difference Between Two Times</ins>](#get-difference-between-wo-times)    
          * [<ins>Remove Same Values Inside Array</ins>](#remove-same-values-inside-array)    
          * [<ins>Add One Day Javascript<ins></ins></ins>](#add-one-day-javascript)    
          * [<ins>Get Local Time<ins></ins></ins>](#get-local-time)    
@@ -105,10 +106,10 @@ ___
 ### <ins>Convert Date in Proper Form</ins>
 
 ```js
-var DOB = new Date("January 26, 1995 04:15:00");             
+var DOB = new Date("1995/01/26 04:15:00");             
 var birthDate = DOB.getDate();             
 var birthYear = DOB.getFullYear();             
-var weekday = new Array(7);             
+var weekday = [];             
   weekday[0] = "Sunday";             
   weekday[1] = "Monday";             
   weekday[2] = "Tuesday";             
@@ -117,7 +118,7 @@ var weekday = new Array(7);
   weekday[5] = "Friday";             
   weekday[6] = "Saturday";             
 var birthDay = weekday[DOB.getDay()];             
-var month = new Array();             
+var month = [];             
   month[0] = "January";             
   month[1] = "February";             
   month[2] = "March";             
@@ -149,13 +150,7 @@ if(birthDate < 10){
  if(secs < 10){             
      secs = "0"+secs;             
  }             
-  print(birthDate);             
-  print(birthMonth);             
-  print(birthYear);             
-  print(birthDay);             
-  print(hours + ":");             
-  print(minutes + ":");             
-  print(secs);             
+  print(birthDate+" "+birthMonth+" "+birthYear+" "+birthDay+" "+hours + ":"+minutes + ":"+secs);     
 ```
 ___
   > <ins>OUTPUT</ins>    
@@ -164,6 +159,49 @@ ___
 
 ___
 
+
+### <ins>Get Difference Between Two Times</ins>
+
+```js
+var callConnectedTime = '2021/04/12 18:34:59 +0530';
+var callEndTime = '2021/04/12 18:35:14 +0530';
+var ivrTime = '75298';
+
+ivrTime = parseInt((ivrTime % 1000) / 100);
+print('ivrTym ==> '+ivrTime);
+
+var connectedTym = Date.parse(callConnectedTime);
+var endTym = Date.parse(callEndTime);
+
+function msToTime(duration) {
+  var milliseconds = parseInt((duration % 1000) / 100),
+    seconds = Math.floor((duration / 1000) % 60),
+    minutes = Math.floor((duration / (1000 * 60)) % 60),
+    hours = Math.floor((duration / (1000 * 60 * 60)) % 24);
+    
+    milliseconds = milliseconds < 0 ? 0 : milliseconds;
+    seconds = seconds < 0 ? 0 : seconds;
+    minutes = minutes < 0 ? 0 : minutes;
+    hours = hours < 0 ? 0 : hours;
+
+  hours = (hours < 10) ? "0" + hours : hours;
+  minutes = (minutes < 10) ? "0" + minutes : minutes;
+  seconds = (seconds < 10) ? "0" + seconds : seconds;
+  return hours + ":" + minutes + ":" + seconds + "." + milliseconds;
+}
+
+var tymDiff = endTym - connectedTym - parseInt(ivrTime);
+
+var talkTime = msToTime(tymDiff);
+
+
+print('talkTime ==>> '+talkTime);
+```
+
+> <ins>OUTPUT</ins>
+> 
+>ivrTym ==> 2
+>talkTime ==>> 00:00:14.9
 
 ### <ins>Remove Same Values Inside Array</ins>
 ==>> This will not work for Nodeflow          
