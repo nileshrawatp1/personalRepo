@@ -6,7 +6,7 @@ Javascript Queries
          * [<ins>To Hide OR Unhide div on some dropdown value</ins>](#to-hide-or-unhide-div-on-some-dropdown-value)    
          * [<ins>Shorthand Ternary Operator</ins>](#shorthand-ternary-operator)    
          * [<ins>Convert Date in Proper Form</ins>](#convert-date-in-proper-form)    
-         * [<ins>Get Difference Between Two Times</ins>](#get-difference-between-wo-times)    
+         * [<ins>Get Difference Between Two Times</ins>](#get-difference-between-two-times)    
          * [<ins>Remove Same Values Inside Array</ins>](#remove-same-values-inside-array)    
          * [<ins>Add One Day Javascript<ins></ins></ins>](#add-one-day-javascript)    
          * [<ins>Get Local Time<ins></ins></ins>](#get-local-time)    
