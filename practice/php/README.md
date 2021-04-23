@@ -22,7 +22,7 @@ Table of Contents
     * [<ins> **PHP OOPS Concepts** </ins>](#-php-oops-concepts-)
    
 
-# <ins># <ins>Logs Functions With Unique Flowid</ins>
+# <ins>Logs Functions With Unique Flowid</ins>
 ```php
 function id() {
     $server = str_pad(hexdec(basename(__FILE__)) ^ $_SERVER['SERVER_ADDR'] % 99, 2, '0', STR_PAD_LEFT);
