@@ -1,22 +1,3 @@
-Javascript Queries
-==================
-
-   * [Table of Contents](#table-of-contents)    
-         * [<ins>Working With Arrays for Inputs<ins></ins></ins>](#working-with-arrays-for-inputs)    
-         * [<ins>To Hide OR Unhide div on some dropdown value</ins>](#to-hide-or-unhide-div-on-some-dropdown-value)    
-         * [<ins>Shorthand Ternary Operator</ins>](#shorthand-ternary-operator)    
-         * [<ins>Convert Date in Proper Form</ins>](#convert-date-in-proper-form)    
-         * [<ins>Get Difference Between Two Times</ins>](#get-difference-between-two-times)    
-         * [<ins>Remove Same Values Inside Array</ins>](#remove-same-values-inside-array)    
-         * [<ins>Add One Day Javascript<ins></ins></ins>](#add-one-day-javascript)    
-         * [<ins>Get Local Time<ins></ins></ins>](#get-local-time)    
-         * [<ins>Set Time Format<ins></ins></ins>](#set-time-format)      
-         * [<ins>Merging Two Objects Or Arrays<ins>](#merging-two-objects-or-arrays)      
-         * [<ins>Distructuring(important) Objects and Arrays</ins>](#distructuringimportant-objects-and-arrays)    
-         * [<ins>Dependent State City Dropdowns India<ins></ins></ins>](#dependent-state-city-dropdowns-india)       
-         * [<ins>Dependent State City Dropdowns US<ins></ins></ins>](#dependent-state-city-dropdowns-us)       
-         * [<ins>Pick Random Number</ins>](#pick-random-number)  
-
 ### <ins>Working With Arrays for Inputs<ins>     
 
 ```js
@@ -587,7 +568,7 @@ print(callID);
 var min = 10;
 var max = 30;
 
-// Between any two numbers
+// Between max and min numbers
 var betweenTwoNum = Math.floor(Math.random() * (max - min + 1)) + min;
 
 // Between 0 and max
