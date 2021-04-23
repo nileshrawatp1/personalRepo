@@ -1,0 +1,15 @@
+!SESSION 2021-04-23 12:42:39.469 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.8.0_121
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=x86, WS=gtk, NL=en_US
+Framework arguments:  -Xms64m -Xmx128m
+Command-line arguments:  -os linux -ws gtk -arch x86 -Xms64m -Xmx128m
+
+!ENTRY org.eclipse.equinox.app 2021-04-23 12:42:40.156
+!MESSAGE Product com_drishti_dacx_nodeflow_designer_model.AmeyoNodeflowDesigner could not be found.
+
+!ENTRY org.eclipse.ui 2 0 2021-04-23 12:42:41.232
+!MESSAGE Warnings while parsing the key bindings from the 'org.eclipse.ui.commands' extension point
+!SUBENTRY 1 org.eclipse.ui 2 0 2021-04-23 12:42:41.232
+!MESSAGE Cannot bind to an undefined command: plug-in='com_drishti_dacx_nodeflow_model_diagram', id='com.drishti.dacx.nodeflow.model.diagram.OpenURICommand'
