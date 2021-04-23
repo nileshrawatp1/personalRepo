@@ -1,4 +1,3 @@
-
 # <ins>Logs Functions With Unique Flowid</ins>
 ```php
 function id() {
