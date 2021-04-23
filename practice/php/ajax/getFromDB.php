@@ -1,4 +1,4 @@
-<?php include 'dbConn.php'; ?>
+<?php include 'dbConn.php';?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -11,7 +11,7 @@
     <script src="ajax.min.js"></script>
 
     <script>
-    
+
             $(document).ready(function() {
                 var dataCount = 2;
                 console.log("loading");
@@ -32,22 +32,22 @@
     <div id="comments">
 
     <?php
-    
-        $sql = "SELECT * from call_history LIMIT 2";
-        $result = pg_query($conn, $sql);
-        if(pg_num_rows($result) > 0) {
-            while ($data = pg_fetch_assoc($result)){
-                echo "<p>";
-                echo $data['src_phone'];
-                echo "<br>";
-                echo $data['date_added'];
-                echo "</p>";
-            }
-        } else {
-            echo "Thare are no results";
-        }
 
-    ?>
+$sql = "SELECT * from call_history LIMIT 2";
+$result = pg_query($conn, $sql);
+if (pg_num_rows($result) > 0) {
+    while ($data = pg_fetch_assoc($result)) {
+        echo "<p>";
+        echo $data['src_phone'];
+        echo "<br>";
+        echo $data['date_added'];
+        echo "</p>";
+    }
+} else {
+    echo "Thare are no results";
+}
+
+?>
 
     </div>
     <button id="btn">Show Something</button>
