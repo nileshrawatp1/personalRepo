@@ -2,7 +2,33 @@
 
 - [Table of Contents](#table-of-contents)  
    * [<ins><ins>Filter SQL Queries</ins></ins></ins>](#filter-sql-queries)  
+   * [<ins><ins>Create Alias</ins></ins></ins>](#create-alias)  
 
+
+### <ins>Create Alias</ins>
+ - locate .bashrc   
+ - Paste all alias over there.    
+```bash
+alias agit='cd /home/nilesh/github/ameyoGits/'
+alias alogs='cd /dacx/var/ameyo/dacxdata/com.drishti.dacx.server.product/logs/'
+alias crm='cd /dacx/ameyo/crm/html/'
+alias egrep='egrep --color=auto'
+alias fgrep='fgrep --color=auto'
+alias gadd='git add .'
+alias gc='git commit -m'
+alias gcl='git clone'
+alias gpom='git push origin master'
+alias grep='grep --color=auto'
+alias gs='git status'
+alias h='history'
+alias home='cd /home/nilesh/'
+alias l='ls -al'
+alias l.='ls -d .* --color=auto'
+alias ll='ls -l --color=auto'
+alias ls='ls --color=auto'
+alias ngit='cd /home/nilesh/github/nileshGits/'
+alias search='grep -Pri'
+```
 
 ### <ins>Filter SQL Queries</ins>
 
