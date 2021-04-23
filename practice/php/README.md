@@ -47,8 +47,8 @@ function debugLog($message, $level = LOG_LEVEL, $logfile = LOG_PATH, $enable = L
     if ($enable) {
         global $logs_flow_id;
         file_exists($logfile) ?: mkdir($logfile, 0777, true);
-        $log_file_data = $logfile . '/' . date(DATE_FORMAT) . '.log';
-        $now = "\n[" . date(TIMESTAMP_FORMAT) . "] ";
+        $log_file_data = $logfile . '/' . date('d-M-Y') . '.log';
+        $now     = "\n[" . date("Y-M-d H:i:s") . "] ";
         $message = $now . '[' . $level . '] ' . '[' . LOG_IVR_ID . "] " . $message;
         error_log($message, 3, $log_file_data);
     }
