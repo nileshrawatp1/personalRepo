@@ -2,6 +2,7 @@ Table of Contents
 =================
 
 * [**Table of Contents**](#table-of-contents)     
+    * [<ins>**Logs Functions With Unique Flowid**</ins>](#logs-functions-with-unique-flowid)          
     * [<ins>**Get the selected in dropdown for Loops**</ins>](#get-the-selected-in-dropdown-for-loops)          
     * [<ins> **Comman String Functions** </ins>](#-comman-string-functions-)     
             * [1. Get Particular Part Of a String ==&gt;&gt; substr()](#1-get-particular-part-of-a-string--substr)     
@@ -20,6 +21,40 @@ Table of Contents
             * [2. if-elseif Conditions](#2-if-elseif-conditions)     
     * [<ins> **PHP OOPS Concepts** </ins>](#-php-oops-concepts-)
    
+
+# <ins># <ins>Logs Functions With Unique Flowid</ins>
+```php
+function id() {
+    $server = str_pad(hexdec(basename(__FILE__)) ^ $_SERVER['SERVER_ADDR'] % 99, 2, '0', STR_PAD_LEFT);
+    $pid = str_pad(substr(getmypid(), -2), 2, '0', STR_PAD_LEFT);
+    $time = str_pad(str_replace('.', '', microtime(TRUE)), 2, '0');
+    $uId = (int)($time . $server . $pid . mt_rand(0, 9));
+    $uniqueIdOne = substr($uId, -9);
+    $uniqueIdTwo = substr($uId, 9);
+    $uniqueId = "$uniqueIdOne.$uniqueIdTwo";
+    return $uniqueId;
+}
+$logs_flow_id = id();
+
+/// Defining For Better Logs.................
+define("LOG_PATH","/dacx/var/ameyo/dacxdata/log/testingLogs");
+define("LOG_LEVEL","Low");
+define("LOG_LEVEL","highOne");
+define("LOG_ENABLE","true");
+define("LOG_IVR_ID","F.$logs_flow_id");
+
+function debugLog($message, $level = LOG_LEVEL, $logfile = LOG_PATH, $enable = LOG_ENABLE) {
+    if ($enable) {
+        global $logs_flow_id;
+        file_exists($logfile) ?: mkdir($logfile, 0777, true);
+        $log_file_data = $logfile . '/' . date(DATE_FORMAT) . '.log';
+        $now = "\n[" . date(TIMESTAMP_FORMAT) . "] ";
+        $message = $now . '[' . $level . '] ' . '[' . LOG_IVR_ID . "] " . $message;
+        error_log($message, 3, $log_file_data);
+    }
+}
+
+```
 
 
 # <ins>Get the selected in dropdown for Loops</ins>
