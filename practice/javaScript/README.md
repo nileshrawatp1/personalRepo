@@ -228,17 +228,17 @@ var betweenZeroAndMax = Math.floor(Math.random() * (max + 1));
 // Between 1 and max
 var betweenOneAndMax = Math.floor(Math.random() * max) + 1;
 
-print('betweenTwoNum ==>> '+betweenTwoNum);  
-print('betweenZeroAndMax ==>> '+betweenZeroAndMax);  
-print('betweenOneAndMax ==>> '+betweenOneAndMax);  
+print('betweenTwoNum ==>> '+betweenTwoNum);
+print('betweenZeroAndMax ==>> '+betweenZeroAndMax);
+print('betweenOneAndMax ==>> '+betweenOneAndMax);
 ```
 ____     
 
 > <ins>OUTPUT</ins>   
 > 
-> betweenTwoNum ==>> 28
-> betweenZeroAndMax ==>> 26
-> betweenOneAndMax ==>> 2
+> betweenTwoNum ==>> 28  
+> betweenZeroAndMax ==>> 26  
+> betweenOneAndMax ==>> 2  
 ___
 
 ### <ins>Getting the URL parameters in JS</ins>
