@@ -46,6 +46,7 @@ Table of Contents
                  
  print("Added 30 Seconds ==>> "+addedSeconds);
 ```
+___
 > <ins>Output</ins>
 > 
 > Added 4 years ==>> Fri Apr 25 2025 05:56:09 GMT-0000 (GMT)  
@@ -54,7 +55,7 @@ Table of Contents
 > Added 2 Hours ==>> Sun Apr 25 2021 07:56:09 GMT-0000 (GMT)  
 > Added 5 Minutes ==>> Sun Apr 25 2021 06:01:09 GMT-0000 (GMT)  
 > Added 30 Seconds ==>> Sun Apr 25 2021 05:56:39 GMT-0000 (GMT)  
-
+___
 ### <ins>GET Date in Month and Weekday Name</ins>
 
 ```js
@@ -215,6 +216,8 @@ cbDate=monthWithoutOffset+'/'+dt+'/'+yearWithoutOffset+' '+hr+':'+min+':'+sec;
 print("IVR_loggin_cbDate ==> "+cbDate);
 
 ```
+___
 > <ins>OUTPUT</ins>   
 >
 > IVR_loggin_cbDate ==> 12/13/2020 10:54:14  
+___
