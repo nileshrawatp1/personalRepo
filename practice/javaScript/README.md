@@ -1,14 +1,14 @@
 Table of Contents
 =================
 
-   * [Table of Contents](#table-of-contents)
-         * [<ins>Working With Arrays for Inputs<ins></ins></ins>](#working-with-arrays-for-inputs)
-         * [<ins>To Hide OR Unhide div on some dropdown value</ins>](#to-hide-or-unhide-div-on-some-dropdown-value)
-         * [<ins>Shorthand Ternary Operator</ins>](#shorthand-ternary-operator)
-         * [<ins>Remove Same Values Inside Array</ins>](#remove-same-values-inside-array)
-         * [<ins>Merging Two Objects Or Arrays<ins></ins></ins>](#merging-two-objects-or-arrays)
-         * [<ins>Distructuring(important) Objects and Arrays</ins>](#distructuringimportant-objects-and-arrays)
-         * [<ins>Pick Random Number</ins>](#pick-random-number)   
+   * [Table of Contents](#table-of-contents)    
+         * [<ins>Working With Arrays for Inputs<ins></ins></ins>](#working-with-arrays-for-inputs)    
+         * [<ins>To Hide OR Unhide div on some dropdown value</ins>](#to-hide-or-unhide-div-on-some-dropdown-value)    
+         * [<ins>Shorthand Ternary Operator</ins>](#shorthand-ternary-operator)    
+         * [<ins>Remove Same Values Inside Array</ins>](#remove-same-values-inside-array)    
+         * [<ins>Merging Two Objects Or Arrays<ins></ins></ins>](#merging-two-objects-or-arrays)    
+         * [<ins>Distructuring(important) Objects and Arrays</ins>](#distructuringimportant-objects-and-arrays)    
+         * [<ins>Pick Random Number</ins>](#pick-random-number)       
 ### <ins>Working With Arrays for Inputs<ins>     
 
 ```js
