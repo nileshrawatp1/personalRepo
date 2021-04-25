@@ -3,7 +3,7 @@ import * as getParams from './getParams.js';
 var mobile = getParams.phone;
 var fullName = getParams.name;
 
-// console.log("FetchAPIDoc "+mobile);
+console.log(`FetchAPIDoc ${mobile}`);
 // console.log(`FetchAPIDoc ${fullName}`);
 
 /// Things coming from the vaeryLastExport.js file through getParams file.
