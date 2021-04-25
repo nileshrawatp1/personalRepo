@@ -1,12 +1,12 @@
 Table of Contents
 =================
 
-   * [Table of Contents](#table-of-contents)
-         * [<ins>Adding DATE/Time To the DATE</ins>](#adding-datetime-to-the-date)
-         * [<ins>GET Date in Month and Weekday Name</ins>](#get-date-in-month-and-weekday-name)
-         * [<ins>Get Difference Between Two Times</ins>](#get-difference-between-two-times)
-         * [<ins>Get Local Time<ins></ins></ins>](#get-local-time)
-         * [<ins>Set Time Format<ins></ins></ins>](#set-time-format)
+   * [Table of Contents](#table-of-contents)  
+         * [<ins>Adding DATE/Time To the DATE</ins>](#adding-datetime-to-the-date)  
+         * [<ins>GET Date in Month and Weekday Name</ins>](#get-date-in-month-and-weekday-name)  
+         * [<ins>Get Difference Between Two Times</ins>](#get-difference-between-two-times)  
+         * [<ins>Get Local Time<ins></ins></ins>](#get-local-time)  
+         * [<ins>Set Time Format<ins></ins></ins>](#set-time-format)  
 ### <ins>Adding DATE/Time To the DATE</ins>
 ```js
 // ##################################### Added 5 years to current date #####################################
