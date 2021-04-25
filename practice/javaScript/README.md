@@ -11,11 +11,11 @@ Table of Contents
          * [<ins>Pick Random Number</ins>](#pick-random-number)       
          * [<ins>Getting the URL parameters in JS</ins>](#getting-the-url-parameters-in-js)  
 ### <ins>Working With Arrays for Inputs<ins>     
-___
+
 ```js
 var languageMenuInput = 1;
 var mainMenuInput = 2
-___
+
 var camp_leads_comb = [
                 ['',''],
                 ['169','19426','19425','19424','19423','19421','19422'],
@@ -35,10 +35,12 @@ console.log("campaignId ==>> "+campaignId);
 console.log("leadId ==>> "+leadId);
 
 ```
+___
 > <ins>Output</ins>
 >    
 > campaignId ==>> 171   
 > leadId ==>> 19427
+___
 
 **For Language Menu Input**
 
