@@ -19,28 +19,28 @@ var dayUserInput = prompt('What day is it ?');
 var day = dayUserInput.toLowerCase();
 switch (day) {
   case 'monday':
-    print('Today is Monday');
+    console.log('Today is Monday');
     break;
   case 'tuesday':
-    print('Today is Tuesday');
+    console.log('Today is Tuesday');
     break;
   case 'wednesday':
-    print('Today is Wednesday');
+    console.log('Today is Wednesday');
     break;
   case 'thursday':
-    print('Today is Thursday');
+    console.log('Today is Thursday');
     break;
   case 'friday':
-    print('Today is Friday');
+    console.log('Today is Friday');
     break;
   case 'saturday':
-    print('Today is Saturday');
+    console.log('Today is Saturday');
     break;
   case 'sunday':
-    print('Today is Sunday');
+    console.log('Today is Sunday');
     break;
 
   default:
-    print('It is not a week day.');
+    console.log('It is not a week day.');
     break;
 }
