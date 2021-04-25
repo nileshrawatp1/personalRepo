@@ -236,9 +236,9 @@ ____
 
 > <ins>OUTPUT</ins>   
 > 
-> betweenTwoNum ==>> 28  
-> betweenZeroAndMax ==>> 26  
-> betweenOneAndMax ==>> 2  
+> betweenTwoNum ==>> 28    
+> betweenZeroAndMax ==>> 26    
+> betweenOneAndMax ==>> 2    
 ___
 
 ### <ins>Getting the URL parameters in JS</ins>
