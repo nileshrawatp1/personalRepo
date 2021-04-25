@@ -160,8 +160,13 @@ var personDetails = {
 console.log(personDetails);
 console.log(personDetails.fname);
 ```
+____     
+
+> <ins>OUTPUT</ins>   
+>
 > {fname: "Kapil", lname: "Singh"}    
 > Kapil    
+___
 
 2. **Merging Arrays**       
 
@@ -173,7 +178,12 @@ var details = [...person, ...job];
 
 console.log(details);
 ```
+____     
+
+> <ins>OUTPUT</ins>   
+>
 > ["Nilesh", "Rawat", "Ameyo", "Gurgaon"]   
+___
 
 ### <ins>Distructuring(important) Objects and Arrays</ins>     
 
@@ -184,10 +194,15 @@ var [firstElement, secondElement] = array;
 console.log(firstElement, secondElement);
 console.log(firstElement);
 console.log(secondElement);
+```
+____     
+
+> <ins>OUTPUT</ins>   
+>
 > Nilesh Rawat   
 > Nilesh   
 > Rawat   
-```
+___
 
 ### <ins>Pick Random Number</ins>  
 - It will pick the random number between 1-10.  
@@ -217,9 +232,18 @@ print('betweenTwoNum ==>> '+betweenTwoNum);
 print('betweenZeroAndMax ==>> '+betweenZeroAndMax);
 print('betweenOneAndMax ==>> '+betweenOneAndMax);
 ```
+____     
+
+> <ins>OUTPUT</ins>   
+> 
+> betweenTwoNum ==>> 28
+> betweenZeroAndMax ==>> 26
+> betweenOneAndMax ==>> 2
+___
 
 ### <ins>Getting the URL parameters in JS</ins>
- - Here URL was `http://127.0.0.1:5500/api.html?phone=9512916949`
+ - Here URL was `http://127.0.0.1:5500/api.html?phone=9512916949`  
+ - API Response will be `{"data":{"mobile":"9512916949","unique_id":"6084eb876c8e180767fadabb"},"success":true,"message":""}`  
 ```js
 //?! ============= Function fot GETTING The URL Parameters Values ===========getUrlParam
 //?  ===== function below parses and returns the parameters.
@@ -258,7 +282,12 @@ request.onload = () => {
         var apiResponse = 'ERROR : ' + response.status;
     }
     var uniqueId = apiResponse.data.unique_id;
-    console.log(uniqueId);
+    console.log("uniqueId ==>> "+uniqueId);
 }
 
 ```
+___
+> <ins>Output</ins>
+>
+> uniqueId ==>> 608512e0e0716f07b03efb48
+___
