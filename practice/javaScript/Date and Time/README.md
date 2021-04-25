@@ -48,12 +48,12 @@ Table of Contents
 ```
 > <ins>Output</ins>
 > 
-> Added 4 years ==>> Fri Apr 25 2025 05:56:09 GMT-0000 (GMT)
-> Added 8 Months ==>> Sat Dec 25 2021 05:56:09 GMT-0000 (GMT)
-> Added 7 days ==>> Sun May 02 2021 05:56:09 GMT-0000 (GMT)
-> Added 2 Hours ==>> Sun Apr 25 2021 07:56:09 GMT-0000 (GMT)
-> Added 5 Minutes ==>> Sun Apr 25 2021 06:01:09 GMT-0000 (GMT)
-> Added 30 Seconds ==>> Sun Apr 25 2021 05:56:39 GMT-0000 (GMT)
+> Added 4 years ==>> Fri Apr 25 2025 05:56:09 GMT-0000 (GMT)  
+> Added 8 Months ==>> Sat Dec 25 2021 05:56:09 GMT-0000 (GMT)  
+> Added 7 days ==>> Sun May 02 2021 05:56:09 GMT-0000 (GMT)  
+> Added 2 Hours ==>> Sun Apr 25 2021 07:56:09 GMT-0000 (GMT)  
+> Added 5 Minutes ==>> Sun Apr 25 2021 06:01:09 GMT-0000 (GMT)  
+> Added 30 Seconds ==>> Sun Apr 25 2021 05:56:39 GMT-0000 (GMT)  
 
 ### <ins>GET Date in Month and Weekday Name</ins>
 
@@ -149,12 +149,12 @@ var talkTime = msToTime(tymDiff);
 
 print('talkTime ==>> '+talkTime);
 ```
-
+___
 > <ins>OUTPUT</ins>
 > 
 >ivrTym ==> 2    
 >talkTime ==>> 00:00:14.9   
-
+___
 ### <ins>Get Local Time<ins>
 
 ```js
@@ -178,8 +178,6 @@ ___
 
 > <ins>OUTPUT</ins>   
 > 
->Millisecond ==>> 1607858395749   
->Exact Time ==>> Sun Dec 13 2020 16:49:55 GMT-0000 (GMT)   
 >The local time for city Faridabad is ==>> December 13, 2020 at 4:49:55 PM GMT   
 ___
 
@@ -219,4 +217,4 @@ print("IVR_loggin_cbDate ==> "+cbDate);
 ```
 > <ins>OUTPUT</ins>   
 >
-> IVR_loggin_cbDate ==> 12/13/2020 10:54:14
+> IVR_loggin_cbDate ==> 12/13/2020 10:54:14  
