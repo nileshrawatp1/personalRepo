@@ -9,12 +9,13 @@ Table of Contents
          * [<ins>Merging Two Objects Or Arrays<ins></ins></ins>](#merging-two-objects-or-arrays)    
          * [<ins>Distructuring(important) Objects and Arrays</ins>](#distructuringimportant-objects-and-arrays)    
          * [<ins>Pick Random Number</ins>](#pick-random-number)       
+         * [<ins>Getting the URL parameters in JS</ins>](#getting-the-url-parameters-in-js)  
 ### <ins>Working With Arrays for Inputs<ins>     
-
+___
 ```js
 var languageMenuInput = 1;
 var mainMenuInput = 2
-
+___
 var camp_leads_comb = [
                 ['',''],
                 ['169','19426','19425','19424','19423','19421','19422'],
@@ -213,4 +214,49 @@ var betweenOneAndMax = Math.floor(Math.random() * max) + 1;
 print('betweenTwoNum ==>> '+betweenTwoNum);
 print('betweenZeroAndMax ==>> '+betweenZeroAndMax);
 print('betweenOneAndMax ==>> '+betweenOneAndMax);
+```
+
+### <ins>Getting the URL parameters in JS</ins>
+ - Here URL was `http://127.0.0.1:5500/api.html?phone=9512916949`
+```js
+//?! ============= Function fot GETTING The URL Parameters Values ===========getUrlParam
+//?  ===== function below parses and returns the parameters.
+function getUrlVars() {
+    var vars = {};
+    var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function (m, key, value) {
+        vars[key] = value;
+    });
+    return vars;
+}
+// var phone = getUrlVars()["phone"];  //? To get the param directly if it will not be null ever.
+// console.log("phone ==>> "+phone);
+
+//? ==== End of Parse Function
+
+//? === For Handling the null values of the parameter or the param is missing ===
+function getUrlParam(parameter, defaultvalue) {
+    var urlparameter = defaultvalue;
+    if (window.location.href.indexOf(parameter) > -1) {
+        urlparameter = getUrlVars()[parameter];
+    }
+    return urlparameter;
+}
+var phone = getUrlParam("phone", "EMPTY");
+//? ==== End of handling blank
+//! ========= Ends of Both Functions here =======
+
+/// ======== Calling the API HERE =========
+const request = new XMLHttpRequest();
+request.open("GET", "http://apiocrm.testbook.com/v1/lead/agent?mobile=" + phone);
+request.send();
+request.onload = () => {
+    if (request.status === 200) {
+        var apiResponse = JSON.parse(request.response);
+    } else {
+        var apiResponse = 'ERROR : ' + response.status;
+    }
+    var uniqueId = apiResponse.data.unique_id;
+    console.log(uniqueId);
+}
+
 ```
