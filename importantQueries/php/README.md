@@ -21,6 +21,7 @@ Table of Contents
             * [1. if-else Conditions](#1-if-else-conditions)  
             * [2. if-elseif Conditions](#2-if-elseif-conditions)  
          * [<ins> PHP OOPS Concepts </ins>](#-php-oops-concepts-)  
+         * [<ins>Number Masking Function</ins>](#number-masking-function)  
 
 ### <ins>Converting milliseconds to hh::mm::ss.a</ins>
 ```php
@@ -290,3 +291,19 @@ echo $acd;
     - Interface
     - Abstraction
     - Magic Methods
+
+    ### <ins>Number Masking Function</ins>    
+    ```php
+function numberMasking($num_to_mask) {
+    $strlength = strlen($num_to_mask);
+    $stars_get = '';
+    for ($i = 0; $i < $strlength - 2; $i++) {
+        $stars_get .= '*';
+    }
+    $lastTwo = substr($num_to_mask, -2);
+    $num_to_mask = $stars_get . $lastTwo;
+
+    return $num_to_mask;
+}
+$masked_number = numberMasking($phone);
+    ```
