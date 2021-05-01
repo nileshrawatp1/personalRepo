@@ -293,7 +293,8 @@ echo $acd;
     - Magic Methods
 
     ### <ins>Number Masking Function</ins>    
-    ```php
+
+```php
 function numberMasking($num_to_mask) {
     $strlength = strlen($num_to_mask);
     $stars_get = '';
@@ -306,4 +307,4 @@ function numberMasking($num_to_mask) {
     return $num_to_mask;
 }
 $masked_number = numberMasking($phone);
-    ```
+```
