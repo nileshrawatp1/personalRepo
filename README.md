@@ -29,6 +29,7 @@ alias ll='ls -l --color=auto'
 alias ls='ls --color=auto'
 alias ngit='cd /home/nilesh/github/nileshGits/'
 alias search='grep -Pri'
+alias rhino='java -jar /home/nilesh/testing/rhino-16rc6.jar'
 ```
 
 ### <ins>Filter SQL Queries</ins>
