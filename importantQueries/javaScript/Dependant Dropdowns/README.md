@@ -152,14 +152,21 @@ var stateData = {
 };
 
                 window.onload = function () {
+                        var stateSelected = "<? echo $data['state'];?>";
+                        var citySelected = "<? echo $data['city'];?>";
                         statesId.length = 1;
                         cityId.length = 1;
                         for (var state in stateData) {
-                        statesId.options[statesId.options.length] = new Option(state, state);
+                        if (state == stateSelected){
+                                statesId.options[statesId.options.length] = new Option(state, state, false, true);
+                                cityId.options[cityId.options.length] = new Option(citySelected, citySelected, false, true);
+                        } else {
+                                statesId.options[statesId.options.length] = new Option(state, state);
+                        }
                 }
                 statesId.onchange = function () {
                         cityId.length = 1;
-                        if (this.selectedIndex < 1) return;
+                        // if (this.selectedIndex < 1) return;
                         var city = stateData[this.value];
                         for (var i = 0; i < city.length; i++) {
                         cityId.options[cityId.options.length] = new Option(city[i], city[i]);
