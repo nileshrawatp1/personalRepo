@@ -50,20 +50,28 @@ var stateData = {
         Uttarakhand:["Almora", "Bageshwar", "Chamoli", "Champawat", "Dehradun", "Haridwar", "Nainital", "Pauri Garhwal", "Pithoragarh", "Rudraprayag", "Tehri Garhwal", "Udham Singh Nagar", "Uttarkashi"],
         West_Bengal: ["Birbhum", "Bankura", "Bardhaman", "Darjeeling", "Dakshin Dinajpur", "Hooghly", "Howrah", "Jalpaiguri", "Cooch Behar", "Kolkata", "Maldah", "Paschim Medinipur", "Purba Medinipur", "Murshidabad", "Nadia", "North 24 Parganas", "South 24 Parganas", "Purulia", "Uttar Dinajpur"]
         };
+        
         window.onload = function () {
-                statesId.length = 1;
-                cityId.length = 1;
-                for (var state in stateData) {
-                statesId.options[statesId.options.length] = new Option(state, state);
+                        var stateSelected = "<? echo $data['state'];?>";
+                        var citySelected = "<? echo $data['city'];?>";
+                        statesId.length = 1;
+                        cityId.length = 1;
+                        for (var state in stateData) {
+                        if (state == stateSelected){
+                                statesId.options[statesId.options.length] = new Option(state, state, false, true);
+                                cityId.options[cityId.options.length] = new Option(citySelected, citySelected, false, true);
+                        } else {
+                                statesId.options[statesId.options.length] = new Option(state, state);
+                        }
                 }
-        statesId.onchange = function () {
-                cityId.length = 1;
-                if (this.selectedIndex < 1) return;
-                var city = stateData[this.value];
-                for (var i = 0; i < city.length; i++) {
-                cityId.options[cityId.options.length] = new Option(city[i], city[i]);
-                }
-        };
+                statesId.onchange = function () {
+                        cityId.length = 1;
+                        // if (this.selectedIndex < 1) return;
+                        var city = stateData[this.value];
+                        for (var i = 0; i < city.length; i++) {
+                        cityId.options[cityId.options.length] = new Option(city[i], city[i]);
+                        }
+                };
         };
 
 ```
