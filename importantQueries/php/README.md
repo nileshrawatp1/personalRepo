@@ -47,8 +47,8 @@ function id() {
     $pid = str_pad(substr(getmypid(), -2), 2, '0', STR_PAD_LEFT);
     $time = str_pad(str_replace('.', '', microtime(TRUE)), 2, '0');
     $uId = (int)($time . $server . $pid . mt_rand(0, 9));
-    $uniqueIdOne = substr($uId, -9);
-    $uniqueIdTwo = substr($uId, 9);
+    $uniqueIdOne = substr($uId, -10);
+    $uniqueIdTwo = substr($uId, 8);
     $uniqueId = "$uniqueIdOne.$uniqueIdTwo";
     return $uniqueId;
 }
@@ -63,6 +63,7 @@ define("LOG_IVR_ID","F.$logs_flow_id");
 
 function debugLog($message, $level = LOG_LEVEL, $logfile = LOG_PATH, $enable = LOG_ENABLE) {
     if ($enable) {
+        date_default_timezone_set('Asia/Kolkata');
         global $logs_flow_id;
         file_exists($logfile) ?: mkdir($logfile, 0777, true);
         $log_file_data = $logfile . '/' . date('d-M-Y') . '.log';
