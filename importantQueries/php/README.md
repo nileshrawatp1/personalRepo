@@ -57,7 +57,6 @@ $logs_flow_id = id();
 /// Defining For Better Logs.................
 define("LOG_PATH","/dacx/var/ameyo/dacxdata/log/testingLogs");
 define("LOG_LEVEL","Low");
-define("LOG_LEVEL","highOne");
 define("LOG_ENABLE","true");
 define("LOG_IVR_ID","F.$logs_flow_id");
 
@@ -297,9 +296,8 @@ echo $acd;
 
 ```php
 function numberMasking($num_to_mask) {
-    $strlength = strlen($num_to_mask);
     $stars_get = '';
-    for ($i = 0; $i < $strlength - 2; $i++) {
+    for ($i = 0; $i < strlen($num_to_mask) - 2; $i++) {
         $stars_get .= '*';
     }
     $lastTwo = substr($num_to_mask, -2);
