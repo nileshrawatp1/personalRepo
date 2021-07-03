@@ -2,13 +2,15 @@ Table of Contents
 =================
 
    * [Table of Contents](#table-of-contents)    
-         * [<ins>Working With Arrays for Inputs<ins></ins></ins>](#working-with-arrays-for-inputs)    
-         * [<ins>To Hide OR Unhide div on some dropdown value</ins>](#to-hide-or-unhide-div-on-some-dropdown-value)    
-         * [<ins>Shorthand Ternary Operator</ins>](#shorthand-ternary-operator)    
-         * [<ins>Remove Same Values Inside Array</ins>](#remove-same-values-inside-array)    
-         * [<ins>Merging Two Objects Or Arrays<ins></ins></ins>](#merging-two-objects-or-arrays)    
-         * [<ins>Distructuring(important) Objects and Arrays</ins>](#distructuringimportant-objects-and-arrays)    
-         * [<ins>Pick Random Number</ins>](#pick-random-number)       
+         * [<ins>Working With Arrays for Inputs<ins></ins></ins>](#working-with-arrays-for-inputs)  
+         * [<ins>To Hide OR Unhide div on some dropdown value</ins>](#to-hide-or-unhide-div-on-some-dropdown-value)  
+         * [<ins>Shorthand Ternary Operator</ins>](#shorthand-ternary-operator)  
+         * [<ins>Remove Same Values Inside Array</ins>](#remove-same-values-inside-array)  
+         * [<ins>Merging Two Objects Or Arrays<ins></ins></ins>](#merging-two-objects-or-arrays)  
+         * [<ins>Distructuring(important) Arrays</ins>](#distructuringimportant-arrays)  
+         * [<ins>Distructuring(important) Objects</ins>](#distructuringimportant-objects)  
+         * [<ins>Distructuring(important) Complicated One</ins>](#distructuringimportant-complicated-one)  
+         * [<ins>Pick Random Number</ins>](#pick-random-number)  
          * [<ins>Getting the URL parameters in JS</ins>](#getting-the-url-parameters-in-js)  
 ### <ins>Working With Arrays for Inputs<ins>     
 
@@ -185,23 +187,179 @@ ____
 > ["Nilesh", "Rawat", "Ameyo", "Gurgaon"]   
 ___
 
-### <ins>Distructuring(important) Objects and Arrays</ins>     
+### <ins>Distructuring(important) Arrays</ins>     
 
 ```js
-var array = ['Nilesh', 'Rawat'];
-// array destructuring
-var [firstElement, secondElement] = array;
-console.log(firstElement, secondElement);
-console.log(firstElement);
-console.log(secondElement);
+var arr = [
+  ["Nilesh", "Developer"],
+  ["Sattu", "Docter"],
+  ["Kapil", "Teacher"]
+];
+
+var [[devopName, devopProfile], [docName, docProfile], [teacherName, teacherProfile]] = arr;
+console.log(devopName);
+console.log(devopProfile);
+console.log(docName);
+console.log(docProfile);
+console.log(teacherName);
+console.log(teacherProfile);
 ```
 ____     
 
 > <ins>OUTPUT</ins>   
 >
-> Nilesh Rawat   
-> Nilesh   
-> Rawat   
+> "Nilesh"
+> "Developer"
+> "Sattu"
+> "Docter"
+> "Kapil"
+> "Teacher"
+___
+
+ - Spreding, rest or skipping some values.    
+ ```js
+const states = ['Delhi', 'Haryana', 'Goa', 'Mumbai', 'Gujrat'];
+let [indiaCapital,,beachState,...otherStates] = states;
+
+console.log('indiaCapital : '+indiaCapital);
+// Skipped Haryana Here
+console.log('beachState : '+beachState);
+console.log('otherStates : '+otherStates);
+ ```
+ ____     
+
+> <ins>OUTPUT</ins>   
+>
+> "indiaCapital : Delhi"
+>"beachState : Goa"
+>"otherStates : Mumbai,Gujrat"
+___
+
+### <ins>Distructuring(important) Objects</ins>     
+
+```js
+var arr = [
+  {
+    fr_escalated: false,
+    spam: false,
+    group_id: 62000083703,
+    priority: 1,
+    requester_id: 62009916517,
+    source: 2,
+    status: 2,
+    subject: "Issue on GeoLocation Screen | Uno",
+    id: 220783,
+    due_by: "2021-07-08T06:04:23Z",
+    fr_due_by: "2021-07-05T12:04:23Z",
+    is_escalated: false,
+    custom_fields: {
+      cf_problem: "Onboarding",
+      cf_details: "Geo Location Issue",
+      cf_subdetails: "App Error"
+    },
+    created_at: "2021-07-03T08:04:23Z",
+    updated_at: "2021-07-03T08:04:23Z",
+    nr_escalated: false
+  }
+];
+
+var [
+  {
+    subject,
+    group_id,
+    id,
+    custom_fields: { cf_problem },
+    created_at
+  }
+] = arr;
+
+console.log(group_id);
+console.log(id);
+console.log(cf_problem);
+console.log(created_at);
+console.log(subject);
+```
+____     
+
+> <ins>OUTPUT</ins>   
+>
+> 62000083703
+> 220783
+> "Onboarding"
+> "2021-07-03T08:04:23Z"
+> "Issue on GeoLocation Screen | Uno"
+___
+
+ - Spreding, rest or skipping some values.    
+ ```js
+const dataObj = {
+  fname: 'Nilesh',
+  lname: 'Rawat',
+  city: 'Faridabad',
+  state: 'Haryana',
+  pincode: 121004
+}
+
+let {fname, lname, ...rest} = dataObj;
+
+console.log(fname);
+console.log(lname);
+console.log(rest);
+ ```
+ ____     
+
+> <ins>OUTPUT</ins>   
+>
+> "Nilesh"
+> "Rawat"
+> {city: "Faridabad", state: "Haryana", pincode: 121004}
+___   
+
+### <ins>Distructuring(important) Complicated One</ins>     
+
+```js
+const research = {
+    id: 445,
+    data: "2019-05-13T00:00:00",
+    otherContent: "...",
+    acf: {
+      id: 123456789,
+        relatedStaff: [{
+            staffLevel: 'Supervisors',
+            users: [{
+                name: { first: 'Nilesh', last: 'Rawat' }
+            },{
+                name: { first: 'Satender', last: 'Sisodia' }
+            }]
+        },{
+            staffLevel: 'Reseachers',
+            users: [{
+                name: { first: 'Kapil', last: 'Jhon' }
+            }]
+        }]
+    },
+}
+
+getAllUsers = (resultData = []) => {
+  var {acf:{relatedStaff}} = research;
+  relatedStaff.map(({users}) => {
+    users.map(({name:{first, last}}) => {
+      resultData.push(`${first} ${last}`)
+    })
+  })
+  
+  return resultData;
+}
+
+const users = getAllUsers();
+console.log(users);
+
+```
+____     
+
+> <ins>OUTPUT</ins>   
+>
+> ["Nilesh Rawat","Satender Sisodia","Kapil Jhon"]
 ___
 
 ### <ins>Pick Random Number</ins>  
