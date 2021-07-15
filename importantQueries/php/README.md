@@ -47,8 +47,8 @@ function id() {
     $pid = str_pad(substr(getmypid(), -2), 2, '0', STR_PAD_LEFT);
     $time = str_pad(str_replace('.', '', microtime(TRUE)), 2, '0');
     $uId = (int)($time . $server . $pid . mt_rand(0, 9));
-    $uniqueIdOne = substr($uId, -10);
-    $uniqueIdTwo = substr($uId, 8);
+    $uniqueIdOne = substr($uId, 0, 9);
+    $uniqueIdTwo = substr($uId, 9);
     $uniqueId = "$uniqueIdOne.$uniqueIdTwo";
     return $uniqueId;
 }
