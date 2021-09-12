@@ -293,7 +293,7 @@ echo $acd;
     - Abstraction
     - Magic Methods
 
-    ### <ins>Number Masking Function</ins>    
+### <ins>Number Masking Function</ins>    
 
 ```php
 function numberMasking($num_to_mask) {
@@ -311,7 +311,13 @@ $masked_number = numberMasking($phone);
 
  ### <ins>Get All The Params of URL</ins>    
 
+#### 1. To Get Only Parameters.  
 ```php
 $all_params = $_SERVER['REQUEST_URI'];
 $params_arrays = explode("?", $all_params);
+$params = $params_arrays[1];
+```
+#### 2. To Get Full URL with HTTPs and HTTP support.  
+```php
+$actual_link = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? "https" : "http") . "://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
 ```
