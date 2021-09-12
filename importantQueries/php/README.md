@@ -23,6 +23,7 @@ Table of Contents
          * [<ins> PHP OOPS Concepts </ins>](#-php-oops-concepts-)  
          * [<ins>Number Masking Function</ins>](#number-masking-function)  
          * [<ins>Get All The Params of URL</ins>](#get-all-the-params-of-url)  
+         * [<ins>Convert Array to Url String</ins>](#convert-array-to-url-string)  
 
 ### <ins>Converting milliseconds to hh::mm::ss.a</ins>
 ```php
@@ -320,4 +321,17 @@ $params = $params_arrays[1];
 #### 2. To Get Full URL with HTTPs and HTTP support.  
 ```php
 $actual_link = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? "https" : "http") . "://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
+```
+
+ ### <ins>Convert Array to Url String</ins>    
+```php
+$data = [
+    'foo' => 'bar',
+    'baz' => 'boom',
+    'cow' => 'milk',
+    'php' => 'hypertext processor'
+]
+echo http_build_query($data); // output: foo=bar&baz=boom&cow=milk&php=hypertext+processor
+
+echo http_build_query($data, '', '&amp;'); // output: foo=bar&amp;baz=boom&amp;cow=milk&amp;php=hypertext+processor
 ```
