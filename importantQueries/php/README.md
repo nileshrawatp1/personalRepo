@@ -22,7 +22,7 @@ Table of Contents
             * [2. if-elseif Conditions](#2-if-elseif-conditions)  
          * [<ins> PHP OOPS Concepts </ins>](#-php-oops-concepts-)  
          * [<ins>Number Masking Function</ins>](#number-masking-function)  
-         * [<ins>Number Masking Function</ins>](#number-masking-function)  
+         * [<ins>Get All The Params of URL</ins>](#get-all-the-params-of-url)  
 
 ### <ins>Converting milliseconds to hh::mm::ss.a</ins>
 ```php
@@ -309,7 +309,7 @@ function numberMasking($num_to_mask) {
 $masked_number = numberMasking($phone);
 ```
 
-    ### <ins>Get All The Params of URL</ins>    
+ ### <ins>Get All The Params of URL</ins>    
 
 ```php
 $all_params = $_SERVER['REQUEST_URI'];
