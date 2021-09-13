@@ -24,6 +24,7 @@ Table of Contents
          * [<ins>Number Masking Function</ins>](#number-masking-function)  
          * [<ins>Get All The Params of URL</ins>](#get-all-the-params-of-url)  
          * [<ins>Convert Array to Url String</ins>](#convert-array-to-url-string)  
+         * [<ins>Echo PHP errors on page</ins>](#echo-php-errors-on-page)  
 
 ### <ins>Converting milliseconds to hh::mm::ss.a</ins>
 ```php
@@ -334,4 +335,11 @@ $data = [
 echo http_build_query($data); // output: foo=bar&baz=boom&cow=milk&php=hypertext+processor
 
 echo http_build_query($data, '', '&amp;'); // output: foo=bar&amp;baz=boom&amp;cow=milk&amp;php=hypertext+processor
+```
+
+ ### <ins>Echo PHP errors on page</ins>    
+```php
+global $enablecrmdebug;
+$enablecrmdebug = 1;       // possible values are  0 / 1 / 2  to diabled / enable / enable with echo
+$php_debug_enable = false; // possible values are  true / false
 ```
