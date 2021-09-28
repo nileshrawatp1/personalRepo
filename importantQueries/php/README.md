@@ -25,6 +25,7 @@ Table of Contents
          * [<ins>Get All The Params of URL</ins>](#get-all-the-params-of-url)  
          * [<ins>Convert Array to Url String</ins>](#convert-array-to-url-string)  
          * [<ins>Echo PHP errors on page</ins>](#echo-php-errors-on-page)  
+         * [<ins>Get the complete url</ins>](#get-the-complete-url)  
 
 ### <ins>Converting milliseconds to hh::mm::ss.a</ins>
 ```php
