@@ -26,6 +26,7 @@ Table of Contents
          * [<ins>Convert Array to Url String</ins>](#convert-array-to-url-string)  
          * [<ins>Echo PHP errors on page</ins>](#echo-php-errors-on-page)  
          * [<ins>Get the complete url</ins>](#get-the-complete-url)  
+         * [<ins>JSON in backslaches \ formats</ins>](#json-in-backslaches--formats)  
 
 ### <ins>Converting milliseconds to hh::mm::ss.a</ins>
 ```php
@@ -352,6 +353,14 @@ function getUrl() {
         $url .= ( $_SERVER["SERVER_PORT"] !== 80 ) ? ":".$_SERVER["SERVER_PORT"] : ""; 
         $url .= $_SERVER["REQUEST_URI"]; 
         return $url; 
+    }
+$full_url = getUrl();
+```
+ ### <ins>JSON in backslaches \\\\ formats</ins>    
+ - `"[{\"name\": \"bill\", \"score\": 0.7948127388954163}, {\"name\": \"john\", \"score\": 0.782698392868042}]"`;
+ - for json in above format try this
+```php
+$r=json_decode(stripcslashes(trim($response,'"')));
     }
 $full_url = getUrl();
 ```
