@@ -361,6 +361,4 @@ $full_url = getUrl();
  - for json in above format try this
 ```php
 $r=json_decode(stripcslashes(trim($response,'"')));
-    }
-$full_url = getUrl();
 ```
