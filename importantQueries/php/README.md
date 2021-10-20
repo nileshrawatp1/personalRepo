@@ -27,6 +27,7 @@ Table of Contents
          * [<ins>Echo PHP errors on page</ins>](#echo-php-errors-on-page)  
          * [<ins>Get the complete url</ins>](#get-the-complete-url)  
          * [<ins>JSON in backslaches \ formats</ins>](#json-in-backslaches--formats)  
+         * [<ins>POST API Function</ins>](#post-api-function)  
 
 ### <ins>Converting milliseconds to hh::mm::ss.a</ins>
 ```php
@@ -361,4 +362,19 @@ $full_url = getUrl();
  - for json in above format try this
 ```php
 $r=json_decode(stripcslashes(trim($response,'"')));
+```
+ ### <ins>POST API Function</ins>    
+```php
+function callAPIPOST($url, $data, $headr) {
+    $ch = curl_init($url);
+    curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, 0);
+    curl_setopt($ch, CURLOPT_POST, true);
+    curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "POST");
+    curl_setopt($ch, CURLOPT_POSTFIELDS, $data);
+    curl_setopt($ch, CURLOPT_HEADER, false);
+    curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+    curl_setopt($ch, CURLOPT_HTTPHEADER, $headr);
+    $response = curl_exec($ch);
+    return $response;
+}
 ```
