@@ -8,6 +8,8 @@
 ### <ins>Create Alias</ins>
  - locate .bashrc   
  - Paste all alias over there.    
+
+ <b>Local System Alias</b>
 ```bash
 alias agit='cd /home/nilesh/github/ameyoGits/'
 alias alogs='cd /dacx/var/ameyo/dacxdata/com.drishti.dacx.server.product/logs/'
@@ -16,7 +18,7 @@ alias egrep='egrep --color=auto'
 alias fgrep='fgrep --color=auto'
 alias gadd='git add .'
 alias gc='git commit -m'
-alias gindex='~/gh-md-toc README.md'
+alias gac='git commit -am'
 alias gcl='git clone'
 alias gpom='git push origin master'
 alias grep='grep --color=auto'
@@ -24,13 +26,18 @@ alias gs='git status'
 alias glogs='git log --graph --oneline --decorate --pretty=fuller'
 alias h='history'
 alias home='cd /home/nilesh/'
-alias l='ls -al'
 alias l.='ls -d .* --color=auto'
+alias l='ls -ltrah --block-size=m'
 alias ll='ls -l --color=auto'
 alias ls='ls --color=auto'
 alias ngit='cd /home/nilesh/github/nileshGits/'
 alias search='grep -Pri'
-alias rhino='java -jar /home/nilesh/testing/rhino-16rc6.jar'
+alias gindex="~/gh-md-toc README.md"
+alias djtaccess="ssh root@192.168.168.4"
+alias rhino="java -jar /home/nilesh/testing/rhino-16rc6.jar"
+alias phpserver="php -S localhost:8080"
+alias emerge="ssh nilesh@app.ameyoemerge.in -p 6745"
+alias us3copy="scp -rP 40222 nileshrawat@control.dacx.net:/home/nileshrawat/* ."
 ```
 
 ### <ins>Filter SQL Queries</ins>
