@@ -183,3 +183,116 @@ var stateData = {
         };
 
 ```
+### <ins>Three Dependent Fields On Each Other<ins>    
+
+```php
+
+<span id="span_display_2"  name="span_group_personal_disp" style="Display:none"> <? echo $data['category'];?> </span>
+<span id="span_edit_2" name="span_group_personal_edt"  style="Display:inline">
+        <select class="selectbox" id="categoryId" name="category" value="<? echo $data['category'];?>" style="width:122px">
+                <?php
+                        if($data['category'] != ''){
+                                echo '<option value="'.$data['category'].'" selected>'.$data['category'].'</option>';
+                        }
+                ?>
+        </select>
+</span>
+
+<span id="span_display_3"  name="span_group_personal_disp"  style="Display:none"> <? echo $data['maintag'];?> </span>
+<span id="span_edit_3"  name="span_group_personal_edt"  style="Display:inline"> 
+        <select class="selectbox" id="mainTagId" name="maintag" value="<? echo $data['maintag'];?>" style="width:122px">
+                <?php
+                        if($data['maintag'] != ''){
+                                echo '<option value="'.$data['maintag'].'" selected>'.$data['maintag'].'</option>';
+                        }
+                ?>
+        </select>
+</span>
+
+<span id="span_display_4"  name="span_group_personal_disp"  style="Display:none"> <? echo $data['subtag'];?> </span>
+<span id="span_edit_4"  name="span_group_personal_edt"  style="Display:inline"> 
+        <select class="selectbox" id="subTagId" name="subtag" value="<? echo $data['subtag'];?>" style="width:122px">
+                <?php
+                        if($data['subtag'] != ''){
+                                echo '<option value="'.$data['subtag'].'" selected>'.$data['subtag'].'</option>';
+                        }
+                ?>
+        </select>
+</span>
+```
+
+```js
+
+var categoryMainData = {
+    "AC": ["General enquiry (Pre-Booking)-AC", "Service Related-AC", "Post Contract Booking-AC"],
+    "Mani/Pedi": ["General enquiry (Pre-Booking)-Mani/Pedi", "Service Related-Mani/Pedi"],
+    "Facial": ["General enquiry (Pre-Booking)-Facial", "Service Related-Facial"],
+    "Deep cleaning": ["General enquiry (Pre-Booking)-DC", "Service Related-DC"],
+    "Lashes": ["General enquiry (Pre-Booking)-Lashes", "Service Related-Lashes"],
+    "MG & Hairdressing": ["General enquiry (Pre-Booking)-MGH", "Service Related-MGH"],
+    "Massage": ["General enquiry (Pre-Booking)-Massage", "Service Related-Massage"],
+    "Part time Maid": ["General enquiry (One-time)-Maid", "Service Related-Maid", "Sprout Booking-Maid"],
+    "Others": ["General enquiry (Pre-Booking)-Others", "Service Related-Others"],
+    "All Category": ["Payment Related-All", "Account Related-All", "Marketing/Promotion Related-All", "Tech Issues-All"]
+};
+
+var mainSubData = {
+    "General enquiry (Pre-Booking)-AC": ["Service coverage", "Non-Wall Mount AC", "Price checking", "Walk through the app/About a new feature", "Refer a friend"],
+    "Service Related-AC": ["Complaint status", "Request for Invoice/Payment Summary", "Preferred Professional", "Poor Service Quality - Out of Warranty", "Poor Service Quality - Within Warranty", "Cancellation Request", "Make changes in existing request", "Professional No show", "Rescheduling Request", "Professional started the job but not arrived", "Request for Service Report"],
+    "Post Contract Booking-AC": ["Rescheduling Request", "Cancellation Request", "Preferred Professional", "Request for Service Report", "Place next booking for service contract", "Make changes in existing request"],
+    "General enquiry (Pre-Booking)-Mani/Pedi": ["Service coverage", "Price Checking", "Walk through the app/About a new feature", "Refer a friend", "Product related"],
+    "Service Related-Mani/Pedi": ["Complaint status", "Request for Invoice/Payment Summary", "Preferred Professional", "Poor Service Quality - Out of Warranty", "Poor Service Quality - Within Warranty", "Cancellation Request", "Make changes in existing request", "Professional No show", "Rescheduling Request", "Professional started the job but not arrived"],
+    "General enquiry (Pre-Booking)-Facial": ["Service coverage", "Price Checking", "Walk through the app/About a new feature", "Refer a friend", "Product related"],
+    "Service Related-Facial": ["Complaint status", "Request for Invoice/Payment Summary", "Preferred Professional", "Poor Service Quality - Out of Warranty", "Poor Service Quality - Within Warranty", "Cancellation Request", "Make changes in existing request", "Professional No show", "Rescheduling Request", "Professional started the job but not arrived"],
+    "General enquiry (Pre-Booking)-DC": ["Service coverage", "Price Checking", "Walk through the app/About a new feature", "Refer a friend"],
+    "Service Related-DC": ["Complaint status", "Request for Invoice/Payment Summary", "Preferred Professional", "Poor Service Quality - Out of Warranty", "Poor Service Quality - Within Warranty", "Cancellation Request", "Make changes in existing request", "Professional No show", "Rescheduling Request", "Professional started the job but not arrived"],
+    "General enquiry (Pre-Booking)-Lashes": ["Service coverage", "Price Checking", "Walk through the app/About a new feature", "Refer a friend"],
+    "Service Related-Lashes": ["Complaint status", "Request for Invoice/Payment Summary", "Preferred Professional", "Poor Service Quality - Out of Warranty", "Poor Service Quality - Within Warranty", "Cancellation Request", "Make changes in existing request", "Professional No show", "Rescheduling Request", "Professional started the job but not arrived"],
+    "General enquiry (Pre-Booking)-MGH": ["Service coverage", "Price Checking", "Walk through the app/About a new feature", "Refer a friend", "Product related"],
+    "Service Related-MGH": ["Complaint status", "Request for Invoice/Payment Summary", "Preferred Professional", "Poor Service Quality - Out of Warranty", "Poor Service Quality - Within Warranty", "Cancellation Request", "Make changes in existing request", "Professional No show", "Rescheduling Request", "Professional started the job but not arrived"],
+    "General enquiry (Pre-Booking)-Massage": ["Service coverage", "Price Checking", "Walk through the app/About a new feature", "Refer a friend", "Product related"],
+    "Service Related-Massage": ["Complaint status", "Request for Invoice/Payment Summary", "Preferred Professional", "Poor Service Quality - Out of Warranty", "Poor Service Quality - Within Warranty", "Cancellation Request", "Make changes in existing request", "Professional No show", "Rescheduling Request", "Professional started the job but not arrived"],
+    "General enquiry (One-time)-Maid": ["Service coverage", "Price Checking", "Walk through the app/About a new feature", "Refer a friend"],
+    "Service Related-Maid": ["Complaint status", "Request for Invoice/Payment Summary", "Preferred Professional", "Poor Service Quality - Out of Warranty", "Poor Service Quality - Within Warranty", "Cancellation Request", "Make changes in existing request", "Professional No show", "Rescheduling Request", "Professional started the job but not arrived", "Require full kit professional"],
+    "Sprout Booking-Maid": ["Change of preferred professional", "Cancellation (One-time)", "Cancellation (Whole Sprout)", "Change of frequency", "Change date/time (One-Time)", "Change date/time (Whole Sprout)", "Preferred Professional not assigned!", "Sprout not created"],
+    "General enquiry (Pre-Booking)-Others": ["Service coverage", "Price checking", "Walk through the app/About a new feature", "Refer a friend", "Checking on Non-live Category"],
+    "Service Related-Others": ["Complaint status", "Request for Invoice/Payment Summary", "Preferred Professional", "Poor Service Quality - Out of Warranty", "Poor Service Quality - Within Warranty", "Cancellation Request", "Make changes in existing request", "Professional No show", "Rescheduling Request", "Professional started the job but not arrived", "Request for Service Report"],
+    "Payment Related-All": ["Need Payment Link", "Payment got Failed", "Refund Status - UC Credits/Online Payment", "Price Dispute with Professional", "How to Make Payment?"],
+    "Account Related-All": ["Edit Address/Phone/Email/Name", "About Autopay ?", "Remove card Details", "Referral credits not received", "Membership Related"],
+    "Marketing/Promotion Related-All": ["Unsubscribe from Email/SMS/Whatsapp Notification", "Feedback on Marketing Campaigns", "Collaboration Request", "Coupon/Cashback Related"],
+    "Tech Issues-All": ["App Not Working / Crash", "Not able to log in", "Unable to place a request"]
+}
+
+window.onload = function () {
+    var categorySelected = "<?php echo $category; ?>";
+    var mainTagSelected = "<?php echo $main; ?>";
+    categoryId.length = 1;
+    mainTagId.length = 1;
+    subTagId.length = 1;
+    for (var category in categoryMainData) {
+        if (category == categorySelected) {
+            categoryId.options[categoryId.options.length] = new Option(category, category, false, true);
+            mainTagId.options[mainTagId.options.length] = new Option(mainTagSelected, mainTagSelected, false, true);
+        } else {
+            categoryId.options[categoryId.options.length] = new Option(category, category);
+        }
+    }
+
+    categoryId.onchange = function () {
+        mainTagId.length = 1;
+        var maintag = categoryMainData[this.value];
+        for (var i = 0; i < maintag.length; i++) {
+            mainTagId.options[mainTagId.options.length] = new Option(maintag[i], maintag[i]);
+        }
+    };
+
+    mainTagId.onchange = function () {
+        subTagId.length = 1;
+        var subtag = mainSubData[this.value];
+        for (var i = 0; i < subtag.length; i++) {
+            subTagId.options[subTagId.options.length] = new Option(subtag[i], subtag[i]);
+        }
+    };
+};
+
+```
