@@ -281,6 +281,7 @@ window.onload = function () {
 
     categoryId.onchange = function () {
         mainTagId.length = 1;
+        subTagId.length = 1;
         var maintag = categoryMainData[this.value];
         for (var i = 0; i < maintag.length; i++) {
             mainTagId.options[mainTagId.options.length] = new Option(maintag[i], maintag[i]);
