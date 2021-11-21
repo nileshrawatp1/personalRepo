@@ -1,11 +1,12 @@
 # Table of Contents
 
 - [Table of Contents](#table-of-contents)  
+   * [<ins>Create Alias</ins></ins>](#create-alias)  
    * [<ins><ins>Filter SQL Queries</ins></ins></ins>](#filter-sql-queries)  
-   * [<ins><ins>Create Alias</ins></ins></ins>](#create-alias)  
 
 
-### <ins>Create Alias</ins>
+### Create Alias
+---
  - locate .bashrc   
  - Paste all alias over there.    
 
@@ -41,7 +42,7 @@ alias us3copy="scp -rP 40222 nileshrawat@control.dacx.net:/home/nileshrawat/* ."
 ```
 
 ### <ins>Filter SQL Queries</ins>
-
+---
 1. To add two minutes in current time in SQL.
 
 ```sql
@@ -63,3 +64,21 @@ select * from dt_testob_6_6  where session_start_time ::timestamp::text < ''||no
 ```sql
 select  * from campaign_customer where customer_id in (2542872, 2542873, 2542874);
 ```
+
+### <ins>Alternate transfer.sh</ins>  
+---
+1. Using curl (PUT method)
+   - curl -T /path/to/file https://oshi.at   
+   - curl -T /path/to/file https://oshi.at/customfilename # use a different filename   
+   - curl -T /path/to/file https://oshi.at/customfilename/15 # use a different filename and expire in 15 minutes   
+   - curl --upload-file /path/to/file https://oshi.at/customfilename/60 # expire in 60 minutes   
+   - curl -T /path/to/file https://oshi.at/customfilename/-1 # auto-destroy after first download   
+   - curl -T /path/to/file http://didllblj4qsn5oeaejoayl2orvdalsdyr4ppjvstsjfyorffdv6zrlid.onion # upload using our Tor hidden service   
+   - curl -T /path/to/file "https://oshi.at/?expire=1440&autodestroy=1" # auto-destroy on dl and expire in 24 hours   
+
+2. Using curl (POST method)
+   - curl https://oshi.at -F f=@/path/to/file   
+   - curl https://oshi.at -F f=@/path/to/file -F expire=5 # expire in 5 minutes   
+   - curl https://oshi.at -F f=@/path/to/file -F expire=120 -F autodestroy=1 # autodestroy on download or expire in 120 minutes   
+   - curl https://oshi.at -F f=@/path/to/file -F shorturl=0 # force a long URL in order to prevent possible short URL bruteforce   
+   - curl https://oshi.at -F f=@/path/to/file -F randomizefn=1 # randomize filename   
