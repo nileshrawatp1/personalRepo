@@ -2,7 +2,8 @@
 
 - [Table of Contents](#table-of-contents)  
    * [<ins>Create Alias</ins></ins>](#create-alias)  
-   * [<ins><ins>Filter SQL Queries</ins></ins></ins>](#filter-sql-queries)  
+   * [<ins>Filter SQL Queries</ins></ins>](#filter-sql-queries)  
+   * [<ins>Alternate transfer.sh</ins></ins>](#alternate-transfer.sh)  
 
 
 ### Create Alias
@@ -41,7 +42,7 @@ alias emerge="ssh nilesh@app.ameyoemerge.in -p 6745"
 alias us3copy="scp -rP 40222 nileshrawat@control.dacx.net:/home/nileshrawat/* ."
 ```
 
-### <ins>Filter SQL Queries</ins>
+### Filter SQL Queries
 ---
 1. To add two minutes in current time in SQL.
 
@@ -65,7 +66,7 @@ select * from dt_testob_6_6  where session_start_time ::timestamp::text < ''||no
 select  * from campaign_customer where customer_id in (2542872, 2542873, 2542874);
 ```
 
-### <ins>Alternate transfer.sh</ins>  
+### Alternate transfer.sh   
 ---
 1. Using curl (PUT method)
    - curl -T /path/to/file https://oshi.at   
