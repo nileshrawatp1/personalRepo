@@ -12,6 +12,7 @@ Table of Contents
          * [<ins>Distructuring(important) Complicated One</ins>](#distructuringimportant-complicated-one)  
          * [<ins>Pick Random Number</ins>](#pick-random-number)  
          * [<ins>Getting the URL parameters in JS</ins>](#getting-the-url-parameters-in-js)  
+         * [<ins>Regex Remove All Space</ins>](#regex-remove-all-space)  
 ### <ins>Working With Arrays for Inputs<ins>     
 
 ```js
