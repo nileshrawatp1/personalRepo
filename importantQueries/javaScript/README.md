@@ -404,51 +404,39 @@ ___
  - Here URL was `http://127.0.0.1:5500/api.html?phone=9512916949`  
  - API Response will be `{"data":{"mobile":"9512916949","unique_id":"6084eb876c8e180767fadabb"},"success":true,"message":""}`  
 ```js
-//?! ============= Function fot GETTING The URL Parameters Values ===========getUrlParam
-//?  ===== function below parses and returns the parameters.
-function getUrlVars() {
-    var vars = {};
-    var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function (m, key, value) {
-        vars[key] = value;
-    });
-    return vars;
-}
-// var phone = getUrlVars()["phone"];  //? To get the param directly if it will not be null ever.
-// console.log("phone ==>> "+phone);
 
-//? ==== End of Parse Function
-
-//? === For Handling the null values of the parameter or the param is missing ===
-function getUrlParam(parameter, defaultvalue) {
-    var urlparameter = defaultvalue;
-    if (window.location.href.indexOf(parameter) > -1) {
-        urlparameter = getUrlVars()[parameter];
+function getQueryVariable(stringUrl, variable) {
+    if (stringUrl != null) {
+        var query = stringUrl.substring(stringUrl.indexOf('?') + 1,
+            stringUrl.length);
+        var vars = query.split("&");
+        for (var i = 0; i < vars.length; i++) {
+            var pair = vars[i].split("=");
+            if (pair[0] == variable) {
+                return pair[1];
+            }
+        }
     }
-    return urlparameter;
 }
-var phone = getUrlParam("phone", "EMPTY");
-//? ==== End of handling blank
-//! ========= Ends of Both Functions here =======
 
-/// ======== Calling the API HERE =========
-const request = new XMLHttpRequest();
-request.open("GET", "http://apiocrm.testbook.com/v1/lead/agent?mobile=" + phone);
-request.send();
-request.onload = () => {
-    if (request.status === 200) {
-        var apiResponse = JSON.parse(request.response);
-    } else {
-        var apiResponse = 'ERROR : ' + response.status;
-    }
-    var uniqueId = apiResponse.data.unique_id;
-    console.log("uniqueId ==>> "+uniqueId);
-}
+var crm_url = 'https://intellipaat.ameyoemerge.in:8785/intellipaat_zoho/request.php?crm_push_generated_time=1638033616069&userCrtObjectId=d928-61955288-ses-priyank%40intellipaat.com-bdFe70p7-22132-uce-webrtc_priyank_intellipaat_com%40-10846&phone=9770998902&campaignId=973&associationType=manualdial.association&crtObjectId=d928-61955288-vce-257459&externalData=%5B%7B%22recordName%22%3A%22Unknown+Unknown%22%2C%22url%22%3A%22https%3A%5C%2F%5C%2Fcrm.zoho.com%5C%2Fcrm%5C%2Forg419134248%5C%2Ftab%5C%2FLeads%5C%2F1878955000274039715%22%2C%22phone%22%3A%229770998902%22%2C%22recordType%22%3A%22Leads%22%2C%22recordId%22%3A%221878955000274039715%22%2C%22relatedTo%22%3Anull%2C%22integrationType%22%3A%22ZOHO%22%7D%5D&sessionId=d928-61955288-ses-priyank%40intellipaat.com-bdFe70p7-22132&maskingEnabled=false&userId=priyank%40intellipaat.com&callType=outbound.manual.dial';
+
+var decodedCrmUrl = '';
+
+decodedCrmUrl = decodeURIComponent((crm_url + '').replace(/\+/g, '%20'))
+
+additionalData = getQueryVariable(decodedCrmUrl, "externalData");
+additionalData = JSON.parse(additionalData);
+
+var ppp = additionalData[0].phone;
+print(ppp);
+
 
 ```
 ___
 > <ins>Output</ins>
 >
-> uniqueId ==>> 608512e0e0716f07b03efb48
+> 9770998902
 ___
 ### <ins>Regex Remove All Space</ins>
  - Here syntex is `str.replace(/ /g, '')` in which g removes all the spaces with no-space.
