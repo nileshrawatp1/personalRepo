@@ -449,3 +449,8 @@ ___
 >
 > uniqueId ==>> 608512e0e0716f07b03efb48
 ___
+### <ins>Regex Remove All Space</ins>
+ - Here syntex is `str.replace(/ /g, '')` in which g removes all the spaces with no-space.
+```js
+var userIdRes = (!userIdRes.replace(/ /g, '') || userIdRes == '-1') ? 'agent@intellipaat' : userIdRes;
+```
