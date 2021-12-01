@@ -192,24 +192,11 @@ var thisdate=new Date(parseInt(thisdat.getTime())+parseInt(300000));
 var yearWithoutOffset =  parseInt(thisdate.getYear()) + parseInt(1900);
 var monthWithoutOffset = parseInt(thisdate.getMonth()) + parseInt(1);
 
-if (monthWithoutOffset< 10){
-        monthWithoutOffset='0'+monthWithoutOffset;
-}
-var dt;
- dt=thisdate.getDate();
- dt = dt< 10 ? '0'+ dt : dt;
- 
-var hr;
-hr=thisdate.getHours();
-hr = hr< 10 ? '0'+ hr : hr;
-
-var min;
-min= thisdate.getMinutes();
-min = min< 10 ? '0'+ min : min; 
-
-var sec;
-sec=thisdate.getSeconds();
-sec = sec< 10 ? '0'+ sec : sec;
+var monthWithoutOffset = ('0' + monthWithoutOffset).slice(-2);
+var dt = ('0' + thisdate.getDate()).slice(-2);
+var hr = ('0' + thisdate.getHours()).slice(-2);
+var min = ('0' + thisdate.getMinutes()).slice(-2);
+var sec = ('0' + thisdate.getSeconds()).slice(-2);
 
 cbDate=monthWithoutOffset+'/'+dt+'/'+yearWithoutOffset+' '+hr+':'+min+':'+sec;
  
