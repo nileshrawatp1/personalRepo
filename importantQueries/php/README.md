@@ -409,3 +409,6 @@ $new_one = $argv[2];
 echo $phone,"\n";
 echo $new_one, "\n ";
 ```
+> <b><ins>Output</ins></b>  
+> 9876543210  
+> nilesh  
