@@ -2,10 +2,10 @@ Table of Contents
 =================
 
    * [Table of Contents](#table-of-contents)  
-         * [<ins>Converting milliseconds to hh::mm::ss.a</ins>](#converting-milliseconds-to-hhmmssa)  
-         * [<ins>Logs Functions With Unique Flowid</ins>](#logs-functions-with-unique-flowid)  
-         * [<ins>Get the selected in dropdown for Loops</ins>](#get-the-selected-in-dropdown-for-loops)  
-         * [<ins> Comman String Functions </ins>](#-comman-string-functions-)  
+         * [Converting milliseconds to hh::mm::ss.a](#converting-milliseconds-to-hhmmssa)  
+         * [Logs Functions With Unique Flowid](#logs-functions-with-unique-flowid)  
+         * [Get the selected in dropdown for Loops](#get-the-selected-in-dropdown-for-loops)  
+         * [ Comman String Functions ](#-comman-string-functions-)  
             * [1. Get Particular Part Of a String ==&gt;&gt; substr()](#1-get-particular-part-of-a-string--substr)  
             * [2. To get the length of a string ==&gt;&gt; strlen($var)](#2-to-get-the-length-of-a-string--strlenvar)  
             * [3. To find the index of any particular letter in a String ==&gt;&gt; strpos($var, 'word')](#3-to-find-the-index-of-any-particular-letter-in-a-string--strposvar-word)  
@@ -17,19 +17,21 @@ Table of Contents
             * [9. To Check if its string or not ==&gt;&gt; is_string()](#9-to-check-if-its-string-or-not--is_string)  
             * [10. To check values under array is string or not.](#10-to-check-values-under-array-is-string-or-not)  
             * [11. To Compress and deCompress ==&gt;&gt; gzcompress() &amp;&amp; gzdecompress()](#11-to-compress-and-decompress--gzcompress--gzdecompress)  
-         * [<ins> Ternary Operators </ins>](#-ternary-operators-)  
+         * [ Ternary Operators ](#-ternary-operators-)  
             * [1. if-else Conditions](#1-if-else-conditions)  
             * [2. if-elseif Conditions](#2-if-elseif-conditions)  
-         * [<ins> PHP OOPS Concepts </ins>](#-php-oops-concepts-)  
-         * [<ins>Number Masking Function</ins>](#number-masking-function)  
-         * [<ins>Get All The Params of URL</ins>](#get-all-the-params-of-url)  
-         * [<ins>Convert Array to Url String</ins>](#convert-array-to-url-string)  
-         * [<ins>Echo PHP errors on page</ins>](#echo-php-errors-on-page)  
-         * [<ins>Get the complete url</ins>](#get-the-complete-url)  
-         * [<ins>JSON in backslaches \ formats</ins>](#json-in-backslaches--formats)  
-         * [<ins>POST API Function</ins>](#post-api-function)  
+         * [ PHP OOPS Concepts ](#-php-oops-concepts-)  
+         * [Number Masking Function](#number-masking-function)  
+         * [Get All The Params of URL](#get-all-the-params-of-url)  
+         * [Convert Array to Url String](#convert-array-to-url-string)  
+         * [Echo PHP errors on page](#echo-php-errors-on-page)  
+         * [Get the complete url](#get-the-complete-url)  
+         * [JSON in backslaches \ formats](#json-in-backslaches--formats)  
+         * [API Functions](#api-functions)  
+         * [Pass Varibles To File Locally](#pass-varibles-to-file-locally)  
 
-### <ins>Converting milliseconds to hh::mm::ss.a</ins>
+### Converting milliseconds to hh::mm::ss.a
+---
 ```php
 //? function for Coverting the milliseconds to hh:mm:ss.u
 function formatMilliseconds($milliseconds) {
@@ -46,19 +48,16 @@ function formatMilliseconds($milliseconds) {
 }
 ```
 
-### <ins>Logs Functions With Unique Flowid</ins>
+### Logs Functions With Unique Flowid
+---
 ```php
-function id() {
-    $server = str_pad(hexdec(basename(__FILE__)) ^ $_SERVER['SERVER_ADDR'] % 99, 2, '0', STR_PAD_LEFT);
-    $pid = str_pad(substr(getmypid(), -2), 2, '0', STR_PAD_LEFT);
-    $time = str_pad(str_replace('.', '', microtime(TRUE)), 2, '0');
-    $uId = (int)($time . $server . $pid . mt_rand(0, 9));
-    $uniqueIdOne = substr($uId, 0, 9);
-    $uniqueIdTwo = substr($uId, 9);
-    $uniqueId = "$uniqueIdOne.$uniqueIdTwo";
+function generate_guid(){
+    $uid = mt_rand('1111111', '99999999');
+    $uidTwo = mt_rand('11111111', '999999999');
+    $uniqueId = "$uid.$uidTwo";
     return $uniqueId;
 }
-$logs_flow_id = id();
+$logs_flow_id = generate_guid();
 
 /// Defining For Better Logs.................
 define("LOG_PATH","/dacx/var/ameyo/dacxdata/log/testingLogs");
@@ -81,8 +80,8 @@ function debugLog($message, $level = LOG_LEVEL, $logfile = LOG_PATH, $enable = L
 ```
 
 
-### <ins>Get the selected in dropdown for Loops</ins>
-
+### Get the selected in dropdown for Loops
+---
 ```php
 <td width="5%" ></td>
 <td width="16%" class="textlight">Center </td>
@@ -120,8 +119,8 @@ function debugLog($message, $level = LOG_LEVEL, $logfile = LOG_PATH, $enable = L
         <?php endif;?>
 </select>
 ```
-### <ins> Comman String Functions </ins>
-
+###  Comman String Functions 
+---
 #### 1. Get Particular Part Of a String ==>> `substr()`
 * Getting Particular part of a string 
     - **First** is the variable or string.
@@ -262,7 +261,8 @@ echo $decompressed;
 > sgdvfjyrfbuytuygjkugjbgukyiluikytdrxcyvbjkjljhfgxgcgvhjmkl,n nbkl vhjnkljmnbv   
 
 
-### <ins> Ternary Operators </ins>
+###  Ternary Operators 
+---
 #### 1. if-else Conditions   
 ```php
 $input = "18";
@@ -289,7 +289,8 @@ echo $acd;
 ```
 > three     
 
-### <ins> PHP OOPS Concepts </ins>    
+###  PHP OOPS Concepts     
+---
 1. The  PHP Object-Oriented Programming concepts are:    
     - Class 
     - Objects
@@ -298,8 +299,8 @@ echo $acd;
     - Abstraction
     - Magic Methods
 
-### <ins>Number Masking Function</ins>    
-
+### Number Masking Function    
+---
 ```php
 function numberMasking($num_to_mask) {
     $stars_get = '';
@@ -314,8 +315,8 @@ function numberMasking($num_to_mask) {
 $masked_number = numberMasking($phone);
 ```
 
- ### <ins>Get All The Params of URL</ins>    
-
+ ### Get All The Params of URL    
+---
 #### 1. To Get Only Parameters.  
 ```php
 $all_params = $_SERVER['REQUEST_URI'];
@@ -327,7 +328,8 @@ $params = $params_arrays[1];
 $actual_link = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? "https" : "http") . "://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
 ```
 
- ### <ins>Convert Array to Url String</ins>    
+ ### Convert Array to Url String    
+ ---
 ```php
 $data = [
     'foo' => 'bar',
@@ -340,14 +342,16 @@ echo http_build_query($data); // output: foo=bar&baz=boom&cow=milk&php=hypertext
 echo http_build_query($data, '', '&amp;'); // output: foo=bar&amp;baz=boom&amp;cow=milk&amp;php=hypertext+processor
 ```
 
- ### <ins>Echo PHP errors on page</ins>    
+ ### Echo PHP errors on page    
+ ---
 ```php
 global $enablecrmdebug;
 $enablecrmdebug = 1;       // possible values are  0 / 1 / 2  to diabled / enable / enable with echo
 $php_debug_enable = false; // possible values are  true / false
 ```
 
- ### <ins>Get the complete url</ins>    
+ ### Get the complete url    
+ ---
 ```php
 function getUrl() {
         $url = @( $_SERVER["HTTPS"] != 'on' ) ? 'http://'.$_SERVER["SERVER_NAME"] : 'https://'.$_SERVER["SERVER_NAME"]; 
@@ -357,24 +361,51 @@ function getUrl() {
     }
 $full_url = getUrl();
 ```
- ### <ins>JSON in backslaches \\\\ formats</ins>    
+ ### JSON in backslaches \\\\ formats    
+ ---
  - `"[{\"name\": \"bill\", \"score\": 0.7948127388954163}, {\"name\": \"john\", \"score\": 0.782698392868042}]"`;
  - for json in above format try this
 ```php
 $r=json_decode(stripcslashes(trim($response,'"')));
 ```
- ### <ins>POST API Function</ins>    
+ ### API Functions    
+ ---
 ```php
 function callAPIPOST($url, $data, $headr) {
-    $ch = curl_init($url);
-    curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, 0);
-    curl_setopt($ch, CURLOPT_POST, true);
-    curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "POST");
-    curl_setopt($ch, CURLOPT_POSTFIELDS, $data);
-    curl_setopt($ch, CURLOPT_HEADER, false);
-    curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
-    curl_setopt($ch, CURLOPT_HTTPHEADER, $headr);
-    $response = curl_exec($ch);
-    return $response;
+$ch = curl_init($url);
+curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, 0);
+curl_setopt($ch, CURLOPT_POST, true);
+curl_setopt($ch, CURLOPT_CUSTOMREQUEST, 
+);
+curl_setopt($ch, CURLOPT_POSTFIELDS, $data);
+curl_setopt($ch, CURLOPT_HEADER, false);
+curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+curl_setopt($ch, CURLOPT_HTTPHEADER, $headr);
+$response = curl_exec($ch);
+return $response;
 }
+
+function callAPIGET($url, $headr) {
+$ch = curl_init($url);
+curl_setopt($ch, CURLOPT_CUSTOMREQUEST, 
+);
+curl_setopt($ch, CURLOPT_HEADER, false);
+curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+curl_setopt($ch, CURLOPT_HTTPHEADER, $headr);
+$response = curl_exec($ch);
+return $response;
+}
+```
+ ### Pass Varibles To File Locally    
+ ---
+ - Here, `STDIN` is a constant that is defined when php is running from command line.  
+ - The `$argv[0]` AND `$argv[1]` are the Array of arguments passed to script.  
+ - The command to run the file will be `php getAccountId.php +91-9876543210 nilesh`
+```php
+$phone = (defined('STDIN') ? $argv[1] : $_GET["customerPhone"]);
+$phone = substr($phone, -10);
+
+$new_one = $argv[2];
+echo $phone,"\n";
+echo $new_one, "\n ";
 ```
