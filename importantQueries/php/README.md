@@ -2,14 +2,13 @@ Table of Contents
 =================
 
    * [Table of Contents](#table-of-contents)  
-         * [Get the selected in dropdown for Loops](#get-the-selected-in-dropdown-for-loops)   
-         * [ Ternary Operators ](#-ternary-operators-)  
-              * [1. if-else Conditions](#1-if-else-conditions)  
-              * [2. if-elseif Conditions](#2-if-elseif-conditions)  
-         * [ PHP OOPS Concepts ](#-php-oops-concepts-)  
-         * [Number Masking Function](#number-masking-function)  
-         * [Get All The Params of URL](#get-all-the-params-of-url)  
-         * [Convert Array to Url String](#convert-array-to-url-string)  
+         * [Get the selected in dropdown for Loops](#get-the-selected-in-dropdown-for-loops)  
+         * [Ternary Operators](#ternary-operators)  
+            * [1. if-else Conditions](#1-if-else-conditions)  
+            * [2. if-elseif Conditions](#2-if-elseif-conditions)  
+         * [PHP OOPS Concepts](#php-oops-concepts)  
+            * [1. To Get Only Parameters.](#1-to-get-only-parameters)  
+            * [2. To Get Full URL with HTTPs and HTTP support.](#2-to-get-full-url-with-https-and-http-support)  
          * [Echo PHP errors on page](#echo-php-errors-on-page)  
          * [Pass Varibles To File Locally](#pass-varibles-to-file-locally)  
 
