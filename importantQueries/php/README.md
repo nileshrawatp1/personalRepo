@@ -106,7 +106,7 @@ $php_debug_enable = false; // possible values are  true / false
  ### Pass Varibles To File Locally    
  ---
  - Here, `STDIN` is a constant that is defined when php is running from command line.  
- - The `$argv[0]` AND `$argv[1]` are the Array of arguments passed to script.  
+ - The `$argv[1]` AND `$argv[2]` are the Array of arguments passed to script.  
  - The command to run the file will be `php getAccountId.php +91-9876543210 nilesh`
 ```php
 $phone = (defined('STDIN') ? $argv[1] : $_GET["customerPhone"]);
