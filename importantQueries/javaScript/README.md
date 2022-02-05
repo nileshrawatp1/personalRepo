@@ -451,8 +451,8 @@ var userIdRes = (!userIdRes.replace(/ /g, '') || userIdRes == '-1') ? 'agent@int
 var apiResponse = '{"user":{"id":"BB1225","name":"Rinky Mehra","email":"rinky.chandigarhuniversity@gmail.com","mobile":"07969013333"}}';
 
 eval("json = " + apiResponse + ";");
-var preferredAgent = (json["user"] !== undefined) ? json["user"]["id"] : '';
-var mobile = (json["user"] !== undefined) ? json["user"]["mobile"] : '';
+var preferredAgent = (json["user"] !== undefined) ? json["user"]["id"].replace(/ /g, '') : '';
+var mobile = (json["user"] !== undefined) ? json["user"]["mobile"].replace(/ /g, '') : '';
 
 var prefAgent = preferredAgent ? 'Found' : 'NotFound';
 
