@@ -13,6 +13,7 @@ Table of Contents
          * [<ins>Pick Random Number</ins>](#pick-random-number)  
          * [<ins>Getting the URL parameters in JS</ins>](#getting-the-url-parameters-in-js)  
          * [<ins>Regex Remove All Space</ins>](#regex-remove-all-space)  
+         * [<ins>Check Of Key In Array</ins>](#check-of-key-in-array)  
 ### <ins>Working With Arrays for Inputs<ins>     
 
 ```js
@@ -443,3 +444,18 @@ ___
 ```js
 var userIdRes = (!userIdRes.replace(/ /g, '') || userIdRes == '-1') ? 'agent@intellipaat' : userIdRes;
 ```
+
+### <ins>Check Of Key In Array</ins>  
+```js
+// var apiResponse = '{"status": 400,"message": "Lead not exists in 398!"}';
+var apiResponse = '{"user":{"id":"BB1225","name":"Rinky Mehra","email":"rinky.chandigarhuniversity@gmail.com","mobile":"07969013333"}}';
+
+eval("json = " + apiResponse + ";");
+var preferredAgent = (json["user"] !== undefined) ? json["user"]["id"] : '';
+var mobile = (json["user"] !== undefined) ? json["user"]["mobile"] : '';
+
+var prefAgent = preferredAgent ? 'Found' : 'NotFound';
+
+print(prefAgent);
+```
+> Found   
