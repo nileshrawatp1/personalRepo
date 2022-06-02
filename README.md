@@ -5,6 +5,7 @@
    * [<ins>Filter SQL Queries</ins></ins>](#filter-sql-queries)  
    * [<ins>Alternate transfer.sh</ins></ins>](#alternate-transfersh)  
    * [<ins>Vim Whole Guide</ins></ins>](#vim-whole-guide)  
+   * [<ins>Remove Ubuntu DOC issue after scrren Lock</ins></ins>](#remove-ubuntu-doc-issue-after-scrren-lock)  
 
 
 ### Create Alias
@@ -88,3 +89,11 @@ select  * from campaign_customer where customer_id in (2542872, 2542873, 2542874
 ### Vim Whole Guide
 ---
 - https://hea-www.harvard.edu/~fine/Tech/vi.html
+
+### Remove Ubuntu DOC issue after scrren Lock
+---
+- [Github Page](https://github.com/micheleg/dash-to-dock/issues/649)
+- Ok, resolved the issue by removing default ubuntu-dock@ubuntu.com:
+```sql
+sudo mv /usr/share/gnome-shell/extensions/ubuntu-dock@ubuntu.com ~/
+```
