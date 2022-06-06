@@ -14,6 +14,7 @@ Table of Contents
          * [<ins>Getting the URL parameters in JS</ins>](#getting-the-url-parameters-in-js)  
          * [<ins>Regex Remove All Space</ins>](#regex-remove-all-space)  
          * [<ins>Check Of Key In Array</ins>](#check-of-key-in-array)  
+         * [<ins>Get Minimum Date Value</ins>](#check-of-key-in-array)  
 ### <ins>Working With Arrays for Inputs<ins>     
 
 ```js
@@ -459,3 +460,25 @@ var prefAgent = preferredAgent ? 'Found' : 'NotFound';
 print(prefAgent);
 ```
 > Found   
+
+### <ins>Get Minimum Date Value</ins>  
+```js
+function min_date(all_dates) {
+ var min_dt = all_dates[0],
+  min_dtObj = new Date(all_dates[0]);
+ all_dates.forEach(function(dt, index)
+  {
+  if ( new Date( dt ) < min_dtObj)
+  {
+  min_dt = dt;
+  min_dtObj = new Date(dt);
+  }
+  });
+ return min_dt;
+  }
+
+  dateArr = ["2022-06-05T06:44:20Z","2022-06-05T06:40:05Z","2022-06-05T06:40:15Z",];
+
+console.log(min_date(['2015/02/01', '2015/02/02', '2015/01/03']));
+console.log(min_date(dateArr));
+```
