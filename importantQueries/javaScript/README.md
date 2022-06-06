@@ -14,7 +14,7 @@ Table of Contents
          * [<ins>Getting the URL parameters in JS</ins>](#getting-the-url-parameters-in-js)  
          * [<ins>Regex Remove All Space</ins>](#regex-remove-all-space)  
          * [<ins>Check Of Key In Array</ins>](#check-of-key-in-array)  
-         * [<ins>Get Minimum Date Value</ins>](#check-of-key-in-array)  
+         * [<ins>Get Minimum Date Value</ins>](#get-minimum-date-value)  
 ### <ins>Working With Arrays for Inputs<ins>     
 
 ```js
