@@ -6,6 +6,7 @@
    * [<ins>Alternate transfer.sh</ins></ins>](#alternate-transfersh)  
    * [<ins>Vim Whole Guide</ins></ins>](#vim-whole-guide)  
    * [<ins>Remove Ubuntu DOC issue after scrren Lock</ins></ins>](#remove-ubuntu-doc-issue-after-scrren-lock)  
+   * [<ins>Vimdiff to see only changed lines</ins></ins>](#vimdiff-to-see-only-changed-lines)  
 
 
 ### Create Alias
@@ -96,4 +97,12 @@ select  * from campaign_customer where customer_id in (2542872, 2542873, 2542874
 - Ok, resolved the issue by removing default ubuntu-dock@ubuntu.com:
 ```sql
 sudo mv /usr/share/gnome-shell/extensions/ubuntu-dock@ubuntu.com ~/
+```
+### Vimdiff to see only changed lines
+---
+- [Refer Site](https://unix.stackexchange.com/questions/352199/vimdiff-vim-d-how-to-show-only-the-differences-and-fold-all-identical-line)
+```sql
+vimdiff -c 'set diffopt=filler,context:0' file1 file2
+OR
+:set diffopt=filler,context:0
 ```
