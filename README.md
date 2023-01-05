@@ -68,7 +68,9 @@ select  * from campaign_customer where customer_id in (2542872, 2542873, 2542874
 
 ### Alternate transfer.sh   
 ---
-1. Using curl (PUT method)
+1. oshi.at   
+2. bashupload.com   
+3. Using curl (PUT method)
    - curl -T /path/to/file https://oshi.at   
    - curl -T /path/to/file https://oshi.at/customfilename # use a different filename   
    - curl -T /path/to/file https://oshi.at/customfilename/15 # use a different filename and expire in 15 minutes   
@@ -77,7 +79,7 @@ select  * from campaign_customer where customer_id in (2542872, 2542873, 2542874
    - curl -T /path/to/file http://didllblj4qsn5oeaejoayl2orvdalsdyr4ppjvstsjfyorffdv6zrlid.onion # upload using our Tor hidden service   
    - curl -T /path/to/file "https://oshi.at/?expire=1440&autodestroy=1" # auto-destroy on dl and expire in 24 hours   
 
-2. Using curl (POST method)
+4. Using curl (POST method)
    - curl https://oshi.at -F f=@/path/to/file   
    - curl https://oshi.at -F f=@/path/to/file -F expire=5 # expire in 5 minutes   
    - curl https://oshi.at -F f=@/path/to/file -F expire=120 -F autodestroy=1 # autodestroy on download or expire in 120 minutes   
