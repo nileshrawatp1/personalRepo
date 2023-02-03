@@ -11,6 +11,7 @@ Table of Contents
             * [2. To Get Full URL with HTTPs and HTTP support.](#2-to-get-full-url-with-https-and-http-support)  
          * [Echo PHP errors on page](#echo-php-errors-on-page)  
          * [Pass Varibles To File Locally](#pass-varibles-to-file-locally)  
+         * [Get Alternate Days Of Year](#get-alternate-days-of-year)  
 
 ### Get the selected in dropdown for Loops
 ---
@@ -119,3 +120,39 @@ echo $new_one, "\n ";
 > <b><ins>Output</ins></b>  
 > 9876543210  
 > nilesh  
+
+ ### Get Alternate Days Of Year    
+ ---
+```php
+function getHolidays($weeksday, $alternate) {
+    $holidays = [];
+    $counter = 0;
+    $curr_month = date("n");
+    $year = date("Y");
+    for ($month = $curr_month; $month <= 12; $month++) {
+        $days = cal_days_in_month(CAL_GREGORIAN, $month, $year);
+        for ($day = 1; $day <= $days; $day++) {
+            $weekday = date("l", mktime(0, 0, 0, $month, $day, $year));
+            // echo $weekday."\n";
+            if ($weekday == $weeksday) {
+                $counter++;
+                if ($alternate == "Second Alternate Days") {
+                    if ($counter % 2 == 0) {
+                        $holi_date = date("Y-m-d", mktime(0, 0, 0, $month, $day, $year));
+                        array_push($holidays, $holi_date);
+                    }
+                } else {
+                    if ($counter % 2 != 0) {
+                        $holi_date = date("Y-m-d", mktime(0, 0, 0, $month, $day, $year));
+                        array_push($holidays, $holi_date);
+                    }
+                }
+            }
+        }
+    }
+    return $holidays;
+}
+$holidays = getHolidays("Saturday", "First Alternate Days");
+
+print_r($holidays);
+```
