@@ -1,6 +1,6 @@
 # Table of Contents
 
-- [Table of Contents](#table-of-contents)  
+- [Table of Contents](#table-of-contents)   
    * [<ins>Create Alias</ins></ins>](#create-alias)  
    * [<ins>Filter SQL Queries</ins></ins>](#filter-sql-queries)  
    * [<ins>Alternate transfer.sh</ins></ins>](#alternate-transfersh)  
