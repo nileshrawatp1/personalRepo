@@ -67,7 +67,7 @@ OR
 
 To take SSH access of a server without entering the password every time, you can set up passwordless SSH authentication using public key cryptography. Here are the steps to do that:
 
-1. Generate a public/private key pair on your local machine:
+1. Generate a public/private key pair on your local machine:   
    `ssh-keygen`
 
 - Follow the prompts to create your key pair. By default, the keys will be stored in `~/.ssh/` with the filenames `id_rsa` (private key) and id_rsa.pub (public key).
@@ -81,6 +81,6 @@ To take SSH access of a server without entering the password every time, you can
 - Once the public key is copied, you should be able to log in to the remote server without a password prompt.
   `ssh user@remote_server`
 - This will use your private key to authenticate you on the remote server, and you will not be prompted for a password.
-- **Note: If you want to use a specific key for SSH authentication, you can specify it using the -i option:**
-  `ssh -i /path/to/private/key user@remote_server`
+- **Note: If you want to use a specific key for SSH authentication, you can specify it using the -i option:**   
+  `ssh -i /path/to/private/key user@remote_server`   
   **Note :-** That the SSH key-based authentication is more secure than password-based authentication because it uses public key cryptography. With this method, the private key is kept on your client machine, and the public key is stored on the remote server. When you connect to the server, the server verifies your identity by using your public key to encrypt a challenge, and your client machine uses the private key to decrypt it and send it back to the server. If the decrypted challenge matches the original challenge, the server knows that you are authorized to access it.
