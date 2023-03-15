@@ -6,7 +6,7 @@
     - [Remove Ubuntu DOC issue after scrren Lock](#remove-ubuntu-doc-issue-after-scrren-lock)
     - [Vimdiff to see only changed lines](#vimdiff-to-see-only-changed-lines)
     - [Make Virtual Box Static IP NMTUI](#make-virtual-box-static-ip-nmtui)
-    - [Take Server Access kit ssh-key based auth](#take-server-access-kit-ssh-key-based-auth)
+    - [Take Server Access with ssh-key based auth](#take-server-access-with-ssh-key-based-auth)
 
 ### Install Postman Agent For Toolbar Icon
 
@@ -61,23 +61,26 @@ OR
    - Then hit ENTER on deactivate and again hit ENTER on activate.  
      ![activate image](./images/nmtui_third.png)
 
-### Take Server Access kit ssh-key based auth
+### Take Server Access with ssh-key based auth
 
 ---
 
 To take SSH access of a server without entering the password every time, you can set up passwordless SSH authentication using public key cryptography. Here are the steps to do that:
+
 1. Generate a public/private key pair on your local machine:
-    `ssh-keygen`
+   `ssh-keygen`
+
 - Follow the prompts to create your key pair. By default, the keys will be stored in `~/.ssh/` with the filenames `id_rsa` (private key) and id_rsa.pub (public key).
 
 2. Copy the public key to the remote server:
-   
-      `ssh-copy-id user@remote_server`
+
+   `ssh-copy-id user@remote_server`
+
 - Replace "username" with your username on the remote server and "remote_host" with the IP address or hostname of the remote server.
 - Enter the password for the remote server when prompted. This will copy the public key to the remote server and add it to the authorized_keys file.
 - Once the public key is copied, you should be able to log in to the remote server without a password prompt.
-      `ssh user@remote_server`
+  `ssh user@remote_server`
 - This will use your private key to authenticate you on the remote server, and you will not be prompted for a password.
 - **Note: If you want to use a specific key for SSH authentication, you can specify it using the -i option:**
-      `ssh -i /path/to/private/key user@remote_server`
-**Note :-** That the SSH key-based authentication is more secure than password-based authentication because it uses public key cryptography. With this method, the private key is kept on your client machine, and the public key is stored on the remote server. When you connect to the server, the server verifies your identity by using your public key to encrypt a challenge, and your client machine uses the private key to decrypt it and send it back to the server. If the decrypted challenge matches the original challenge, the server knows that you are authorized to access it.
+  `ssh -i /path/to/private/key user@remote_server`
+  **Note :-** That the SSH key-based authentication is more secure than password-based authentication because it uses public key cryptography. With this method, the private key is kept on your client machine, and the public key is stored on the remote server. When you connect to the server, the server verifies your identity by using your public key to encrypt a challenge, and your client machine uses the private key to decrypt it and send it back to the server. If the decrypted challenge matches the original challenge, the server knows that you are authorized to access it.
