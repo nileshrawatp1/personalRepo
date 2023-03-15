@@ -76,7 +76,7 @@ To take SSH access of a server without entering the password every time, you can
 
    `ssh-copy-id user@remote_server`
 
-- Replace "username" with your username on the remote server and "remote_host" with the IP address or hostname of the remote server.
+- Replace "user" with your user on the remote server and "remote_server" with the IP address or hostname of the remote server.
 - Enter the password for the remote server when prompted. This will copy the public key to the remote server and add it to the authorized_keys file.
 - Once the public key is copied, you should be able to log in to the remote server without a password prompt.
   `ssh user@remote_server`
