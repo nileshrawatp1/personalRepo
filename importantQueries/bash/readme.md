@@ -1,7 +1,8 @@
 # Table of Contents
 
-- [Table of Contents](#table-of-contents)  
-   * [<ins>Convert mp3 files to wav</ins></ins>](#convert-mp3-files-to-wav)  
+- [Table of Contents](#table-of-contents)
+    - [Convert mp3 files to wav](#convert-mp3-files-to-wav)
+    - [Rename all Files inside folder](#rename-all-files-inside-folder)
 
 
 
@@ -25,3 +26,31 @@ for file in *.mp3; do ffmpeg -i "$file" -ac 1 -ar 16000 -b:a 8000 -acodec pcm_s1
 - It's important to note that, the command above will use the `ffmpeg` command to convert each mp3 file to a .wav file with the name pattern "{filename}_8000_mono.wav" where the original name for the mp3 file is "{filename}.mp3".
 
 - Please be careful when running such commands, and make sure you are in the correct folder, and that you have enough free space to store all the new files. Also, it is a good practice to make a backup of your files before renaming them.
+
+### Rename all Files inside folder 
+- This script seperates the name with underscore (_) and adds _Eng.wav after that
+
+```sql
+#!/bin/bash
+
+# Specify the directory containing the .wav files
+directory="/home/nilesh/Music/Imarque/English Prompts"
+
+# Change to the specified directory
+cd "$directory"
+
+# Iterate over all .wav files in the directory
+for file in *.wav; do
+    # Get the filename without the extension
+    filename="${file%.*}"
+
+    # Extract the part before the underscore
+    new_filename=$(echo "$filename" | awk -F_ '{print tolower(substr($1,1,1)) substr($1,2)}')
+
+    # Append 'Eng.wav' to the new filename
+    new_filename="${new_filename}_Eng.wav"
+
+    # Rename the file
+    mv "$file" "$new_filename"
+done
+```
